@@ -9,62 +9,82 @@
  *
  */
 
+function Test ()
+{
 
-var BaseClass = Class.extend
-(
-    // Instance methods
-    {
-        construct: function()
+    var BaseClass = Class.extend
+    (
+        // Instance methods
         {
-            this.super.construct();
-            this._type = "BaseClass type";
-            log(this._type+' constructed ');
+            construct: function()
+            {
+                this.super.construct();
+                this._type = "BaseClass type";
+                log(this._type+' constructed ');
+            },
+
+            getType: function()
+            { return this._type; },
+
+            logType: function()
+            {
+                log('BaseClass.logType implementation ('+this._type+')');
+            },
         },
 
-        getType: function()
-        { return this._type; },
-
-        logType: function()
+        // Class methods
         {
-            log('BaseClass.logType implementation ('+this._type+')');
-        },
-    },
-
-    // Class methods
-    {
-        instanceWithValue: function(value)
-        {
-            var instance = new this();
-            instance.value = value;
-            return instance;
+            instanceWithValue: function(value)
+            {
+                var instance = new this();
+                instance.value = value;
+                return instance;
+            }
         }
-    }
-);
+    );
 
-var baseClassInstance = new BaseClass();
-baseClassInstance.logType();
+    var baseClassInstance = new BaseClass();
+    baseClassInstance.logType();
 
-    /*
 
-var SubClass = BaseClass.extend
-(
-    // Instance methods
+    var instanceCreatedUsingClassMethod = BaseClass.instanceWithValue(10);
+    log(instanceCreatedUsingClassMethod.value);
+
+    var SubClass = BaseClass.extend
+    (
+        // Instance methods
+        {
+            construct: function()
+            {
+                this._type = "SubClass type";
+                log(this._type+' constructed');
+                log(this.super.subclassInstance);
+            },
+
+            logType: function()
+            {
+                this.super.logType();
+            },
+
+            onlySubclassCanDo: function()
+            {
+                log('Only subclass can do this.');
+            },
+        }
+    );
+
+    var subClassInstance = new SubClass();
+    subClassInstance.logType(); // It uses BaseClass implementation, but uses this instance as this value!
+    subClassInstance.onlySubclassCanDo(); // It uses BaseClass implementation, but uses this instance as this value!
+
+    if (false)
     {
-        construct: function()
-        {
-            this._type = "SubClass type";
-            log(this._type+' constructed');
-            log(this.super.subclassInstance);
-        },
-
-        logType: function()
-        {
-            this.super.logType();
-        },
+        log(SubClass.instanceWithValue);
+        var instanceCreatedUsingInheritedClassMethod = SubClass.instanceWithValue(20);
+        log(instanceCreatedUsingInheritedClassMethod.value);
+        log(instanceCreatedUsingClassMethod.onlySubclassCanDo());
     }
-);
 
-var subClassInstance = new SubClass();
-subClassInstance.logType(); // It uses BaseClass implementation, but uses this instance as this value!
+}
 
-    */
+Test();

@@ -9,6 +9,10 @@ Doing:
 
     + More test case
 
+0.0.4
+
+    + Misspelling gone
+
 0.0.3
 
     + Some wording (actually not works yet)

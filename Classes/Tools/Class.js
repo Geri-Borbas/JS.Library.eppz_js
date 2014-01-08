@@ -51,7 +51,7 @@ Class.extend = function(instanceMethods, classMethods)
             // Hook in 'super'.
             this.super = _super;
             this.super.subclassInstance = this;
-            // this.constructor.className = this.constructor.name;
+            this.className = this.name;
 
             // Call construct only if 'new' was called outside this function.
             if(arguments[0] == "skip") return;
@@ -76,27 +76,27 @@ Class.extend = function(instanceMethods, classMethods)
             var eachMethod = instanceMethods[eachMethodName];
             if (eachMethod instanceof Function == false) continue;
 
-                instance.prototype[eachMethod] = eachMethod;
+                instance.prototype[eachMethodName] = eachMethod;
         }
 
 
     /**
      * Inherit current class methods.
      */
-/*
+
         // Inherit class methods.
         for(var eachFunctionName in this)
         {
-            var eachFunction = classMethods[eachFunctionName];
+            var eachFunction = this[eachFunctionName];
             if (typeof eachFunction !== 'function') continue;
             instance[eachFunctionName] = eachFunction;
         }
-*/
+
 
     /**
      * Inherit implemented class methods.
      */
-/*
+
         for (var eachMethodName in classMethods)
         {
             var eachMethod = classMethods[eachMethodName];
@@ -104,7 +104,7 @@ Class.extend = function(instanceMethods, classMethods)
 
                 instance[eachMethodName] = eachMethod;
         }
-*/
+
 
     /**
      * Add class goodies.
@@ -112,6 +112,7 @@ Class.extend = function(instanceMethods, classMethods)
 
         // Inheritance.
         instance.extend = this.extend;
+
 
     return instance;
 }
