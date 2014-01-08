@@ -15,13 +15,19 @@ var BaseClass = Class.extend
     // Instance methods
     {
         construct: function()
-        { this._type = "BaseClass"; },
+        {
+            this.super.construct();
+            this._type = "BaseClass type";
+            log(this._type+' constructed ');
+        },
 
         getType: function()
         { return this._type; },
 
         logType: function()
-        { log('Type: '+this.getType()); }
+        {
+            log('BaseClass.logType implementation ('+this._type+')');
+        },
     },
 
     // Class methods
@@ -35,27 +41,27 @@ var BaseClass = Class.extend
     }
 );
 
+var baseClassInstance = new BaseClass();
+baseClassInstance.logType();
+
+
 var SubClass = BaseClass.extend
 (
     // Instance methods
     {
         construct: function()
-        { this._type = "SubClass"; },
-
-        getType: function()
         {
-            log(this.super.getType());
-            return this._type;
+            this._type = "SubClass type";
+            log(this._type+' constructed');
+            log(this.super.callingInstance);
+        },
+
+        logType: function()
+        {
+            this.super.logType();
         },
     }
 );
 
-
-var baseClassInstance = new BaseClass();
 var subClassInstance = new SubClass();
-
-baseClassInstance.logType();
-subClassInstance.logType();
-
-var factoryProduct = BaseClass.instanceWithValue(10);
-log(factoryProduct.value);
+subClassInstance.logType(); // It uses BaseClass implementation, but uses this instance as this value!
