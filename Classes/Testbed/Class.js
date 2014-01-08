@@ -44,6 +44,7 @@ var BaseClass = Class.extend
 var baseClassInstance = new BaseClass();
 baseClassInstance.logType();
 
+    /*
 
 var SubClass = BaseClass.extend
 (
@@ -53,7 +54,7 @@ var SubClass = BaseClass.extend
         {
             this._type = "SubClass type";
             log(this._type+' constructed');
-            log(this.super.callingInstance);
+            log(this.super.subclassInstance);
         },
 
         logType: function()
@@ -65,3 +66,5 @@ var SubClass = BaseClass.extend
 
 var subClassInstance = new SubClass();
 subClassInstance.logType(); // It uses BaseClass implementation, but uses this instance as this value!
+
+    */

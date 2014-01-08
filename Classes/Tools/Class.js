@@ -10,108 +10,105 @@
  */
 
 
-function Class()
-{}
+function Class() {}
+Class.prototype.construct = function() {};
 
-Class.prototype.construct = function()
-{
-    log('Class.prototype.construct');
-};
-
-Class.prototype.getType = function()
-{
-    return 'Class';
-};
 
 /**
- * Equip the instances with the functions given in instanceMethods.
- * Equip the class with the functions given in classMethods.
+ * Creates a class with the given implementations.
  * Add a class method called 'extend'.
  * Add an superclass reference called 'super'.
- * var SomeClass = Class.extend({ feature: function() {} });
  */
-
 Class.extend = function(instanceMethods, classMethods)
 {
+    /**
+     * Create 'super' for the new class.
+     */
 
-    // Super dispatch object.
-    var _super = new Object();
-        _super.superClass = this.prototype;
-        _super.callingInstance = null;
+        // Intermediate object to dispatch 'super' calls to superclass.
+        var _super = new Object();
+            _super.superClass = this.prototype;
+            _super.subclassInstance = null; // Will be populated on construction time.
 
-    // Equip with superclass methods.
-    for (var eachSuperFunctionName in this.prototype)
-    {
-        var eachSuperFunction = this.prototype[eachSuperFunctionName];
+            // Equip with superclass methods.
+            for (var eachSuperMethodName in this.prototype)
+            {
+                var eachSuperMethod = this.prototype[eachSuperMethodName];
+                if (eachSuperMethod instanceof Function == false) continue;
 
-        if (eachSuperFunction instanceof Function == false) continue;
-        log(eachSuperFunctionName+': '+eachSuperFunction.toString());
+                // Call superclass implementation with subclass instance injected as 'this'.
+                _super[eachSuperMethodName] = function()
+                { return this.superClass[eachSuperMethodName].apply(this.subclassInstance, arguments); };
+            }
 
-        // Set (wrapped) on _super.
-        _super[eachSuperFunctionName] = function()
+
+    /**
+     * Create the new class.
+     */
+
+        var instance = function()
         {
-            log('A super function just called! Wow!');
-            log(this.callingInstance);
+            // Hook in 'super'.
+            this.super = _super;
+            this.super.subclassInstance = this;
+            // this.constructor.className = this.constructor.name;
 
-            return this.superClass[eachSuperFunctionName].apply(this.callingInstance, arguments);
+            // Call construct only if 'new' was called outside this function.
+            if(arguments[0] == "skip") return;
+
+            this.construct.apply(this, arguments);
         };
-    }
+
 
     /**
-     * Create an object empty object.
-     * This will be the constructor function for the object, will be called when it goes like
-     * var someObject = new SomeClass();
+     * Inherit current instance methods.
      */
-    var instance = function()
-    {
-        // Hook in super, callingInstance references.
-        this.super = _super;
-        this.super.callingInstance = this;
 
-        // Call construct if 'new' was called outside this function.
-        if(arguments[0] == "Don't call constructor implementation this time") return;
+        instance.prototype = new this("skip");
 
-        this.construct.apply(this, arguments);
-    };
-
-    // Inherit instance methods.
-    instance.prototype = new this("Don't call constructor implementation this time");
 
     /**
-     * Instance methods.
+     * Equip implemented instance methods.
      */
 
-        // Equip the prototype with the new instance methods.
-        for (var eachFunctionName in instanceMethods)
+        for (var eachMethodName in instanceMethods)
         {
-            var eachFunction = instanceMethods[eachFunctionName];
-            if (eachFunction instanceof Function == false) continue;
+            var eachMethod = instanceMethods[eachMethodName];
+            if (eachMethod instanceof Function == false) continue;
 
-                instance.prototype[eachFunctionName] = eachFunction;
+                instance.prototype[eachMethod] = eachMethod;
         }
 
+
     /**
-     * Class methods.
+     * Inherit current class methods.
      */
-
-        /*
-            // Inherit class methods.
-            for(var eachFunctionName in this)
-            {
-                var eachFunction = classMethods[eachFunctionName];
-                if (typeof eachFunction !== 'function') continue;
-                instance[eachFunctionName] = eachFunction;
-            }
-        */
-
-        // Equip the prototype with the implemented functions.
-        for (var eachFunctionName in classMethods)
+/*
+        // Inherit class methods.
+        for(var eachFunctionName in this)
         {
             var eachFunction = classMethods[eachFunctionName];
-            if (eachFunction instanceof Function == false) continue;
-
-                instance[eachFunctionName] = eachFunction;
+            if (typeof eachFunction !== 'function') continue;
+            instance[eachFunctionName] = eachFunction;
         }
+*/
+
+    /**
+     * Inherit implemented class methods.
+     */
+/*
+        for (var eachMethodName in classMethods)
+        {
+            var eachMethod = classMethods[eachMethodName];
+            if (eachMethod instanceof Function == false) continue;
+
+                instance[eachMethodName] = eachMethod;
+        }
+*/
+
+    /**
+     * Add class goodies.
+     */
 
         // Inheritance.
         instance.extend = this.extend;

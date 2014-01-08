@@ -9,6 +9,10 @@ Doing:
 
     + More test case
 
+0.0.3
+
+    + Some wording (actually not works yet)
+
 0.0.2
 
     + Hooked in 'super' method calls with correct 'this' reference within.
