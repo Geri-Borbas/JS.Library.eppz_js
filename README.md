@@ -1,13 +1,16 @@
 Doing:
 
-    + Inherit class methods
-    + Comments
+    + Some test case fails
+        + Super.js fails (while Class.js workds)
 
     + Class goodies
         + Automatic getter setter generation
         + Automatic enumerators for collections
 
-    + More test case
+0.0.5
+
+    + Factoring
+        + Equipment is done from one implementation object
 
 0.0.4
 

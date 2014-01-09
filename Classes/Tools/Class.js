@@ -15,12 +15,19 @@ Class.prototype.construct = function() {};
 
 
 /**
+ *
  * Creates a class with the given implementations.
  * Add a class method called 'extend'.
  * Add an superclass reference called 'super'.
+ *
+ * @param implementation An object with all the class implementation.
+ * Can define properties, instance methods (function properties),
+ * and class methods (function properties prefixed with '_').
+ *
  */
-Class.extend = function(instanceMethods, classMethods)
+Class.extend = function(implementation)
 {
+
     /**
      * Create 'super' for the new class.
      */
@@ -46,12 +53,14 @@ Class.extend = function(instanceMethods, classMethods)
      * Create the new class.
      */
 
-        var instance = function()
+        var Class = function()
         {
             // Hook in 'super'.
             this.super = _super;
             this.super.subclassInstance = this;
-            this.className = this.name;
+
+            // Equip constants.
+            copyPropertiesOfObjectTo(implementation, this);
 
             // Call construct only if 'new' was called outside this function.
             if(arguments[0] == "skip") return;
@@ -61,59 +70,60 @@ Class.extend = function(instanceMethods, classMethods)
 
 
     /**
-     * Inherit current instance methods.
+     * Equip methods.
      */
 
-        instance.prototype = new this("skip");
+        // Inherit current instance methods.
+        Class.prototype = new this("skip");
+
+        // Equip implemented instance methods (overwrite inherited).
+        copyMethodsOfObjectTo(implementation, Class.prototype);
+
+        // Inherit current class methods.
+        copyMethodsOfObjectTo(this, Class);
+
+        // Equip implemented class methods (overwirite inherited).
+        copyClassMethodsOfObjectTo(implementation, Class);
 
 
-    /**
-     * Equip implemented instance methods.
-     */
-
-        for (var eachMethodName in instanceMethods)
-        {
-            var eachMethod = instanceMethods[eachMethodName];
-            if (eachMethod instanceof Function == false) continue;
-
-                instance.prototype[eachMethodName] = eachMethod;
-        }
-
-
-    /**
-     * Inherit current class methods.
-     */
-
-        // Inherit class methods.
-        for(var eachFunctionName in this)
-        {
-            var eachFunction = this[eachFunctionName];
-            if (typeof eachFunction !== 'function') continue;
-            instance[eachFunctionName] = eachFunction;
-        }
-
-
-    /**
-     * Inherit implemented class methods.
-     */
-
-        for (var eachMethodName in classMethods)
-        {
-            var eachMethod = classMethods[eachMethodName];
-            if (eachMethod instanceof Function == false) continue;
-
-                instance[eachMethodName] = eachMethod;
-        }
-
-
-    /**
-     * Add class goodies.
-     */
-
-        // Inheritance.
-        instance.extend = this.extend;
-
-
-    return instance;
+    return Class;
 }
 
+
+/**
+ * Helpers
+ */
+
+function copyMethodsOfObjectTo(from, to)
+{
+    var classMethodNamePrefix = '_';
+    for (var eachMethodName in from)
+    {
+        var eachMethod = from[eachMethodName];
+        if (eachMethod instanceof Function == false) continue;
+        if (eachMethodName.charAt(0) == classMethodNamePrefix) continue;
+        to[eachMethodName] = eachMethod;
+    }
+}
+
+function copyClassMethodsOfObjectTo(from, to)
+{
+    var classMethodNamePrefix = '_';
+    for (var eachMethodName in from)
+    {
+        var eachMethod = from[eachMethodName];
+        if (eachMethod instanceof Function == false) continue;
+        if (eachMethodName.charAt(0) !== classMethodNamePrefix) continue;
+        to[eachMethodName.substring(1)] = eachMethod;
+    }
+}
+
+function copyPropertiesOfObjectTo(from, to)
+{
+    for (var eachPropertyName in from)
+    {
+        var eachProperty = from[eachPropertyName];
+        if (eachProperty instanceof Function) continue;
+        to[eachPropertyName] = eachProperty;
+    }
+}

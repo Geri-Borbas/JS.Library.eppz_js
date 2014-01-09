@@ -4,8 +4,11 @@
     <list default="true" id="634ad747-0992-43fe-a8a9-befdcf12abff" name="Default" comment="" />
     <ignored path="eppz!kit.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Class.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389223120425" ignored="false" />
-    <file path="/README.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389223332436" ignored="false" />
+    <file path="/Class.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389232023032" ignored="false" />
+    <file path="/README.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389232462153" ignored="false" />
+    <file path="/Inheritance.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389232050754" ignored="false" />
+    <file path="/index.html" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389231998485" ignored="false" />
+    <file path="/Super.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389232132897" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,35 +27,7 @@
     <favorites_list name="eppz!kit" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Class.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/Testbed/Class.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="13" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="9" selection-start="204" selection-end="204" vertical-scroll-proportion="0.18877058">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Class.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/Tools/Class.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="1698" selection-end="1698" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -63,9 +38,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/Classes/Tools/helpers.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Classes/Tools/Class.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/Classes/Testbed/Inheritance.js" />
         <option value="$PROJECT_DIR$/Classes/Testbed/Class.js" />
+        <option value="$PROJECT_DIR$/Classes/Testbed/Super.js" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -171,6 +148,38 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
   </component>
+  <component name="PublishConfig">
+    <servers>
+      <server id="54a4de72-e279-4ff6-b0f1-23eb115fbe01">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="670205ea-3f32-4664-973c-94ec724fb0a1">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="9a0d2a66-a3ee-4f26-adaf-98e7cfb13a71">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="f2da53d7-43b0-4056-ac8f-accab51f4529">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+    </servers>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
@@ -195,13 +204,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1457" y="-287" width="1702" height="1156" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24970622" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24970622" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -288,30 +297,44 @@
         <state line="54" column="3" selection-start="2050" selection-end="2050" vertical-scroll-proportion="0.7941176" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/Classes/Testbed/Super.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="61" selection-end="61" vertical-scroll-proportion="0.08695652">
+        <state line="14" column="24" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.21671827">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Tools/Class.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1698" selection-end="1698" vertical-scroll-proportion="0.0">
+        <state line="36" column="47" selection-start="1803" selection-end="1803" vertical-scroll-proportion="0.55727553">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="38" selection-start="334" selection-end="334" vertical-scroll-proportion="0.17839445">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Testbed/Class.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="13" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0">
+        <state line="67" column="11" selection-start="2512" selection-end="2512" vertical-scroll-proportion="0.9117647">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Testbed/Inheritance.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="0" selection-start="1733" selection-end="1744" vertical-scroll-proportion="0.7794118">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="9" selection-start="204" selection-end="204" vertical-scroll-proportion="0.18877058">
+        <state line="9" column="0" selection-start="199" selection-end="204" vertical-scroll-proportion="0.13068731">
           <folding />
         </state>
       </provider>
