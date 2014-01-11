@@ -10,33 +10,29 @@
  */
 
 
-function Test_1 ()
+log('||||| Inheritance |||||');
+(function()
 {
+    return;
+
     var A = Class.extend
     ({
-        type: 'A',
-
         aCanDo: function()
-        { log(this.type+' can do this.'); },
+        { log(this.className+' can do here.'); },
     });
 
     var B = A.extend
     ({
-        type: 'B',
-
         bCanDo: function()
-        { log(this.type+' can do this.'); },
+        { log(this.className+' can do there.'); },
     });
 
     var C = B.extend
     ({
-        type: 'C',
-
         cCanDo: function()
-        { log(this.type+' can do this.'); },
+        { log(this.className+' can do anywhere.'); },
 
     });
-
 
     var a = new A();
         a.aCanDo();
@@ -49,7 +45,4 @@ function Test_1 ()
         c.aCanDo();
         c.bCanDo();
         c.cCanDo();
-}
-
-log('---');
-Test_1();
+})();

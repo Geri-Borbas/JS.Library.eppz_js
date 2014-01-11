@@ -1,11 +1,17 @@
 Doing:
 
     + Some test case fails
-        + Super.js fails (while Class.js workds)
+        + Superclass.js fails (while Class.js workds)
 
     + Class goodies
         + Automatic getter setter generation
         + Automatic enumerators for collections
+
+
+0.0.6
+
+    + Super calls are now working
+        + Really sketched on client side, needs to be factored back to 'extend'
 
 0.0.5
 

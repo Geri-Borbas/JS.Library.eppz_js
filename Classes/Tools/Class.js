@@ -12,6 +12,8 @@
 
 function Class() {}
 Class.prototype.construct = function() {};
+Class.prototype.className = 'Class';
+Class.className = 'Class';
 
 
 /**
@@ -24,49 +26,50 @@ Class.prototype.construct = function() {};
  * Can define properties, instance methods (function properties),
  * and class methods (function properties prefixed with '_').
  *
+ * Identical class implementation will have identical class names.
+ *
  */
 Class.extend = function(implementation)
 {
-
     /**
-     * Create 'super' for the new class.
+     * Get class name (in a relentlessly hacky way).
+     * Textual search for the implementation in the code of the calling function,
+     * then carefully crawl towards the variable name.
      */
 
-        // Intermediate object to dispatch 'super' calls to superclass.
-        var _super = new Object();
-            _super.superClass = this.prototype;
-            _super.subclassInstance = null; // Will be populated on construction time.
+        implementationString = stripAlmostEverything(objectToString(implementation));
+        declarationString = stripAlmostEverything(arguments.callee.caller.toString());
 
-            // Equip with superclass methods.
-            for (var eachSuperMethodName in this.prototype)
-            {
-                var eachSuperMethod = this.prototype[eachSuperMethodName];
-                if (eachSuperMethod instanceof Function == false) continue;
+        ____ = declarationString.split(implementationString)[0];
+        ___ = ____.split('=');
+        __ = ___[___.length - 2];
+        _ = __.split('var');
+        newClassName = _[_.length-1];
 
-                // Call superclass implementation with subclass instance injected as 'this'.
-                _super[eachSuperMethodName] = function()
-                { return this.superClass[eachSuperMethodName].apply(this.subclassInstance, arguments); };
-            }
+    log(',,,');
+    log('Creating '+newClassName);
 
 
     /**
-     * Create the new class.
+     * Create the new class (also in a resolutely hacky way).
+     * Constructor name is set for the constructor function at declaration time, so eval() comes handy below.
      */
 
-        var Class = function()
+        var constructorFunction = function()
         {
-            // Hook in 'super'.
-            this.super = _super;
-            this.super.subclassInstance = this;
+            // Call construct only if 'new' was called outside this function.
+            if(arguments[0] == "skip") return;
 
             // Equip constants.
             copyPropertiesOfObjectTo(implementation, this);
 
-            // Call construct only if 'new' was called outside this function.
-            if(arguments[0] == "skip") return;
-
             this.construct.apply(this, arguments);
         };
+
+        eval('var '+newClassName+' = '+constructorFunction.toString());
+        eval('var Class = '+newClassName+';');
+
+
 
 
     /**
@@ -85,6 +88,19 @@ Class.extend = function(implementation)
         // Equip implemented class methods (overwirite inherited).
         copyClassMethodsOfObjectTo(implementation, Class);
 
+    // Save a prototype globally.
+    window[newClassName] = Class.prototype;
+    /**
+     * Tools.
+     */
+
+        Class.prototype.superclassName = this.className;
+        Class.superclassName = this.className;
+
+        Class.prototype.className = newClassName;
+        Class.className = newClassName;
+
+    log('```');
 
     return Class;
 }
@@ -127,3 +143,45 @@ function copyPropertiesOfObjectTo(from, to)
         to[eachPropertyName] = eachProperty;
     }
 }
+
+function objectToString(object)
+{
+    var string = '';
+
+    // Object
+    if (typeof(object) == "object" && (object.join == undefined))
+    {
+        string += '{';
+            for (eachPropertyName in object)
+            { string += eachPropertyName+': '+objectToString(object[eachPropertyName])+', '; };
+        string += '}';
+    }
+
+    // Array
+    else if (typeof(object) == "object" && !(object.join == undefined))
+    {
+        string += '[';
+            for(eachPropertyName in object)
+            { string += objectToString(object[eachPropertyName])+", "; }
+        string += ']';
+
+        //is function
+    }
+
+    // Function
+    else if (typeof(object) == "function")
+    {
+        string += object.toString();
+    }
+
+    // Anything else
+    else
+    {
+        string += JSON.stringify(object);
+    }
+
+    return string;
+}
+
+function stripAlmostEverything(string)
+{ return string.replace(/[^a-zA-Z0-9_$=]/g,''); }

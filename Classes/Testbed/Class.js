@@ -9,7 +9,8 @@
  *
  */
 
-function Test_3 ()
+
+(function ()
 {
 
     var BaseClass = Class.extend
@@ -63,7 +64,5 @@ function Test_3 ()
     var subClassInstance = new SubClass();
     subClassInstance.logType(); // It uses BaseClass implementation, but uses this instance as this value!
     subClassInstance.onlySubclassCanDo(); // It uses BaseClass implementation, but uses this instance as this value!
-}
+})();
 
-log('---');
-Test_3();
