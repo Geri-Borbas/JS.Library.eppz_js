@@ -10,18 +10,23 @@
  */
 
 
-log('||||| Superclass |||||');
+log('______________________________');
+log('eppz!js Class superclass calls');
+log('______________________________');
+
+
 (function()
 {
     var First = Class.extend
     ({
-        work: function()
+        construct: function()
         {
-            var e = 1;
-            log('---');
-            log(this.className + ' : '+this.superclassName);
-            log(window[this.className]);
-            log(this);
+            this.super = function()
+            {
+                var super_ = arguments.callee.caller._super; // Get '_super' reference bound to the calling function.
+                super_.callingInstance = this; // Bind current instance as caller.
+                return super_;
+            };
         },
 
         stuff: function()
@@ -33,69 +38,42 @@ log('||||| Superclass |||||');
 
     var Second = First.extend
     ({
-        work: function()
-        {
-            var e = 2;
-            log('---');
-            log(this.className + ' : '+this.superclassName);
-            log(window[this.className]);
-
-            this.superclassInstance().stuff.apply(this);
-        },
-
-        superclassInstance: function()
-        {
-            return window[this.superclassName];
-        },
-
         stuff: function()
         {
-            var _super = arguments.callee._super;
-            var _self = arguments.callee._self;
-
-            _super.stuff.apply(_self, arguments);
-            log('Secondy stuff (invoked by '+_self.className+').');
+            this.super().stuff();
+            log('Secondy stuff (invoked by '+this.className+').');
         },
     });
 
 
     var Third = Second.extend
     ({
-        work: function()
-        {
-            var e = 3;
-            log('---');
-            log(this.className + ' : '+this.superclassName);
-            log(window[this.className]);
-            log(window[this.superclassName]);
-
-            this.stuff();
-        },
-
         stuff: function()
         {
-            this.superclassInstance().stuff._super = this.superclassInstance().superclassInstance();
-            this.superclassInstance().stuff._self = this;
-            this.superclassInstance().stuff();
-
+            this.super().stuff();
             log('Thirdy stuff (invoked by '+this.className+').');
-        }
+        },
     });
 
-    /**
-     *
-     * Create super object.
-     * Copy superclass functions, simply wrap them, but append caller as self.
-     * Straight function will have appended this as self.
-     *
-     */
+
+    var Fourth = Third.extend
+    ({
+        stuff: function()
+        {
+            this.super().stuff();
+            log('Fourthy stuff (invoked by '+this.className+').');
+        },
+    });
+
 
     var first = new First();
     var second = new Second();
     var third = new Third();
+    var fourth = new Fourth();
 
-    log(first.work());
-    log(second.work());
-    log(third.work());
+    first.stuff();
+    second.stuff();
+    third.stuff();
+    fourth.stuff();
 
 })();

@@ -10,11 +10,13 @@
  */
 
 
-log('||||| Inheritance |||||');
+log('_________________________');
+log('eppz!js Class inheritance');
+log('_________________________');
+
+
 (function()
 {
-    return;
-
     var A = Class.extend
     ({
         aCanDo: function()

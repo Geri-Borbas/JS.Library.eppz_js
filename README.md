@@ -8,6 +8,13 @@ Doing:
         + Automatic enumerators for collections
 
 
+0.0.8
+
+    + Best approach so far
+        + Partly factored back to 'extend'
+        + Only super calls have to be centralized
+        + Now its all wrapped up into a function
+
 0.0.7
 
     + Another working sketch

@@ -46,22 +46,30 @@ Class.extend = function(implementation)
         _ = __.split('var');
         newClassName = _[_.length-1];
 
-    log(',,,');
-    log('Creating '+newClassName);
 
     /**
-     * Create super.
+     * Create 'super' proxy object.
+     * Wraps methods into a function that calls appropriate implementation always with the caller as 'this'.
      */
 
         var _super = new Object;
-            _super.instance = this.prototype;
+            _super.className = this.className;
 
         for (var eachMethodName in this.prototype)
         {
+            var eachMethod = this.prototype[eachMethodName];
+            if (eachMethod instanceof Function == false) continue;
+
             _super[eachMethodName] = function()
             {
-                this.instance[eachMethodName]();
+                var methodName = arguments.callee.methodName;
+                var superclassInstance = arguments.callee.superclassInstance;
+                var callingInstance = this.callingInstance;
+
+                superclassInstance[methodName].apply(callingInstance, arguments);
             }
+            _super[eachMethodName].methodName = eachMethodName;
+            _super[eachMethodName].superclassInstance = this.prototype;
         }
 
 
@@ -69,16 +77,13 @@ Class.extend = function(implementation)
      * Create the new class (also in a resolutely hacky way).
      * Constructor name is set for the constructor function at declaration time, so eval() comes handy below.
      *
-     * Seems a bit expensive: http://jsperf.com/eppz-class-creation
-     * May turn it off in production.
+     * Seems a bit expensive: http://jsperf.com/eppz-class-creation (may turn it off in production).
      */
 
         var constructorFunction = function()
         {
             // Call construct only if 'new' was called outside this function.
             if(arguments[0] == "skip") return;
-
-            this.super = _super;
 
             // Equip constants.
             copyPropertiesOfObjectTo(implementation, this);
@@ -90,28 +95,33 @@ Class.extend = function(implementation)
         eval('var Class = '+newClassName+';');
 
 
-
-
     /**
      * Equip methods.
      */
 
-        // Inherit current instance methods.
-        Class.prototype = new this("skip");
+        /**
+         * Instance
+         */
 
-        // Equip implemented instance methods (overwrite inherited).
-        copyMethodsOfObjectTo(implementation, Class.prototype);
+            // Inherit current instance methods.
+            Class.prototype = new this("skip");
 
-        // Inherit current class methods.
-        copyMethodsOfObjectTo(this, Class);
+            // Equip implemented instance methods (overwrite inherited).
+            copyMethodsOfObjectTo(implementation, Class.prototype, _super);
 
-        // Equip implemented class methods (overwirite inherited).
-        copyClassMethodsOfObjectTo(implementation, Class);
+        /**
+         * Class
+         */
 
-    // Save a prototype globally.
-    window[newClassName] = Class.prototype;
+            // Inherit current class methods.
+            copyMethodsOfObjectTo(this, Class, _super);
+
+            // Equip implemented class methods (overwirite inherited).
+            copyClassMethodsOfObjectTo(implementation, Class, _super);
+
+
     /**
-     * Tools.
+     * Class names.
      */
 
         Class.prototype.superclassName = this.className;
@@ -120,7 +130,6 @@ Class.extend = function(implementation)
         Class.prototype.className = newClassName;
         Class.className = newClassName;
 
-    log('```');
 
     return Class;
 }
@@ -130,7 +139,7 @@ Class.extend = function(implementation)
  * Helpers
  */
 
-function copyMethodsOfObjectTo(from, to)
+function copyMethodsOfObjectTo(from, to, _super)
 {
     var classMethodNamePrefix = '_';
     for (var eachMethodName in from)
@@ -138,11 +147,13 @@ function copyMethodsOfObjectTo(from, to)
         var eachMethod = from[eachMethodName];
         if (eachMethod instanceof Function == false) continue;
         if (eachMethodName.charAt(0) == classMethodNamePrefix) continue;
+
         to[eachMethodName] = eachMethod;
+        to[eachMethodName]._super = _super;
     }
 }
 
-function copyClassMethodsOfObjectTo(from, to)
+function copyClassMethodsOfObjectTo(from, to, _super)
 {
     var classMethodNamePrefix = '_';
     for (var eachMethodName in from)
@@ -150,7 +161,9 @@ function copyClassMethodsOfObjectTo(from, to)
         var eachMethod = from[eachMethodName];
         if (eachMethod instanceof Function == false) continue;
         if (eachMethodName.charAt(0) !== classMethodNamePrefix) continue;
+
         to[eachMethodName.substring(1)] = eachMethod;
+        to[eachMethodName.substring(1)]._super = _super;
     }
 }
 
@@ -160,6 +173,7 @@ function copyPropertiesOfObjectTo(from, to)
     {
         var eachProperty = from[eachPropertyName];
         if (eachProperty instanceof Function) continue;
+
         to[eachPropertyName] = eachProperty;
     }
 }
@@ -184,8 +198,6 @@ function objectToString(object)
             for(eachPropertyName in object)
             { string += objectToString(object[eachPropertyName])+", "; }
         string += ']';
-
-        //is function
     }
 
     // Function
