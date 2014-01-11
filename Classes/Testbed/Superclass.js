@@ -50,7 +50,11 @@ log('||||| Superclass |||||');
 
         stuff: function()
         {
-            log('Secondy stuff (invoked by '+this.className+').');
+            var _super = arguments.callee._super;
+            var _self = arguments.callee._self;
+
+            _super.stuff.apply(_self, arguments);
+            log('Secondy stuff (invoked by '+_self.className+').');
         },
     });
 
@@ -70,10 +74,21 @@ log('||||| Superclass |||||');
 
         stuff: function()
         {
-            this.superclassInstance().stuff.apply(this);
+            this.superclassInstance().stuff._super = this.superclassInstance().superclassInstance();
+            this.superclassInstance().stuff._self = this;
+            this.superclassInstance().stuff();
+
             log('Thirdy stuff (invoked by '+this.className+').');
         }
     });
+
+    /**
+     *
+     * Create super object.
+     * Copy superclass functions, simply wrap them, but append caller as self.
+     * Straight function will have appended this as self.
+     *
+     */
 
     var first = new First();
     var second = new Second();

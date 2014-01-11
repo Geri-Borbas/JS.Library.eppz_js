@@ -2,24 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="634ad747-0992-43fe-a8a9-befdcf12abff" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Classes/Testbed/Super.js" afterPath="$PROJECT_DIR$/Classes/Testbed/Superclass.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Testbed/Class.js" afterPath="$PROJECT_DIR$/Classes/Testbed/Class.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Tools/Class.js" afterPath="$PROJECT_DIR$/Classes/Tools/Class.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Testbed/Inheritance.js" afterPath="$PROJECT_DIR$/Classes/Testbed/Inheritance.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Testbed/Superclass.js" afterPath="$PROJECT_DIR$/Classes/Testbed/Superclass.js" />
     </list>
     <ignored path="eppz!kit.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Class.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389459651437" ignored="false" />
-    <file path="/README.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389460728656" ignored="false" />
+    <file path="/Class.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389466697325" ignored="false" />
+    <file path="/README.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389466749269" ignored="false" />
     <file path="/Inheritance.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389459461353" ignored="false" />
     <file path="/index.html" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389401087736" ignored="false" />
     <file path="/Super.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389232132897" ignored="false" />
     <file path="/Dummy.txt" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389457694478" ignored="false" />
-    <file path="/Superclass.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389460663605" ignored="false" />
+    <file path="/Superclass.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389463262001" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +37,7 @@
       <file leaf-file-name="Class.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classes/Tools/Class.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="0" selection-start="2302" selection-end="2302" vertical-scroll-proportion="0.0">
+            <state line="62" column="47" selection-start="2643" selection-end="2643" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -51,7 +46,7 @@
       <file leaf-file-name="Superclass.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classes/Testbed/Superclass.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="48" selection-start="1721" selection-end="1721" vertical-scroll-proportion="0.0">
+            <state line="87" column="77" selection-start="2978" selection-end="2982" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -60,7 +55,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="78" selection-start="324" selection-end="324" vertical-scroll-proportion="0.19306931">
+            <state line="12" column="28" selection-start="240" selection-end="240" vertical-scroll-proportion="0.17821783">
               <folding />
             </state>
           </provider>
@@ -89,8 +84,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Classes/Testbed/Class.js" />
         <option value="$PROJECT_DIR$/Classes/Testbed/Inheritance.js" />
-        <option value="$PROJECT_DIR$/Classes/Tools/Class.js" />
         <option value="$PROJECT_DIR$/Classes/Testbed/Superclass.js" />
+        <option value="$PROJECT_DIR$/Classes/Tools/Class.js" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -429,23 +424,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Tools/Class.js">
+    <entry file="file://$PROJECT_DIR$/Classes/Testbed/Superclass.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="2302" selection-end="2302" vertical-scroll-proportion="0.0">
+        <state line="87" column="77" selection-start="2978" selection-end="2982" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Testbed/Superclass.js">
+    <entry file="file://$PROJECT_DIR$/Classes/Tools/Class.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="48" selection-start="1721" selection-end="1721" vertical-scroll-proportion="0.0">
+        <state line="62" column="47" selection-start="2643" selection-end="2643" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="78" selection-start="324" selection-end="324" vertical-scroll-proportion="0.19306931">
+        <state line="12" column="28" selection-start="240" selection-end="240" vertical-scroll-proportion="0.17821783">
           <folding />
         </state>
       </provider>

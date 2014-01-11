@@ -49,16 +49,36 @@ Class.extend = function(implementation)
     log(',,,');
     log('Creating '+newClassName);
 
+    /**
+     * Create super.
+     */
+
+        var _super = new Object;
+            _super.instance = this.prototype;
+
+        for (var eachMethodName in this.prototype)
+        {
+            _super[eachMethodName] = function()
+            {
+                this.instance[eachMethodName]();
+            }
+        }
+
 
     /**
      * Create the new class (also in a resolutely hacky way).
      * Constructor name is set for the constructor function at declaration time, so eval() comes handy below.
+     *
+     * Seems a bit expensive: http://jsperf.com/eppz-class-creation
+     * May turn it off in production.
      */
 
         var constructorFunction = function()
         {
             // Call construct only if 'new' was called outside this function.
             if(arguments[0] == "skip") return;
+
+            this.super = _super;
 
             // Equip constants.
             copyPropertiesOfObjectTo(implementation, this);

@@ -8,6 +8,10 @@ Doing:
         + Automatic enumerators for collections
 
 
+0.0.7
+
+    + Another working sketch
+
 0.0.6
 
     + Super calls are now working
