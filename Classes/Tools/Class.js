@@ -74,8 +74,6 @@ Class.extend = function(instanceMethods, classMethods)
                     var superclassInstance = arguments.callee.superclassInstance;
                     var callingInstance = this.callingInstance;
 
-                    log('Calling on '+superclassInstance.className);
-
                     // Call superclass implementation with calling instance as this.
                     return superclassInstance[methodName].apply(callingInstance, arguments);
                 }
@@ -134,6 +132,16 @@ Class.extend = function(instanceMethods, classMethods)
      */
 
         /**
+         * Class names.
+         */
+
+            Class.prototype.superclassName = this.className;
+            Class.superclassName = this.className;
+
+            Class.prototype.className = newClassName;
+            Class.className = newClassName;
+
+        /**
          * Instance
          */
 
@@ -148,29 +156,18 @@ Class.extend = function(instanceMethods, classMethods)
          */
 
             // Inherit current class methods.
-            copyClassMethodsOfObjectTo(this, Class, _super);
+            copyMethodsOfObjectTo(this, Class, _super);
 
             // Equip implemented class methods (overwirite inherited).
-            copyClassMethodsOfObjectTo(classMethods, Class, _super);
+            copyMethodsOfObjectTo(classMethods, Class, _super, '__super');
 
             // Add getter for 'super'.
-            Class.super = function()
+            Object.defineProperty(Class, 'super', { get : function()
             {
-                var super_ = arguments.callee.caller._superClass; // Get '_super' reference bound to the calling function.
+                var super_ = arguments.callee.caller.__super; // Get '_super' reference bound to the calling function.
                 super_.callingInstance = this; // Bind current instance as caller.
                 return super_;
-            };
-
-
-    /**
-     * Class names.
-     */
-
-        Class.prototype.superclassName = this.className;
-        Class.superclassName = this.className;
-
-        Class.prototype.className = newClassName;
-        Class.className = newClassName;
+            }});
 
 
     return Class;
@@ -181,34 +178,31 @@ Class.extend = function(instanceMethods, classMethods)
  * Helpers
  */
 
-function copyMethodsOfObjectTo(from, to, _super)
+function copyMethodsOfObjectTo(from, to, _super, superPropertyName)
 {
-    var classMethodNamePrefix = '_';
+    // Checks.
+    if (from == null) return;
+    if (to == null) return;
+
+    // Defaults.
+    if (superPropertyName == null) superPropertyName = '_super';
+
     for (var eachMethodName in from)
     {
         var eachMethod = from[eachMethodName];
         if (eachMethod instanceof Function == false) continue;
 
         to[eachMethodName] = eachMethod;
-        to[eachMethodName]._super = _super;
-    }
-}
-
-function copyClassMethodsOfObjectTo(from, to, _super)
-{
-    var classMethodNamePrefix = '_';
-    for (var eachMethodName in from)
-    {
-        var eachMethod = from[eachMethodName];
-        if (eachMethod instanceof Function == false) continue;
-
-        to[eachMethodName] = eachMethod;
-        to[eachMethodName]._superClass = _super;
+        to[eachMethodName][superPropertyName] = _super;
     }
 }
 
 function copyPropertiesOfObjectTo(from, to)
 {
+    // Checks.
+    if (from == null) return;
+    if (to == null) return;
+
     for (var eachPropertyName in from)
     {
         var eachProperty = from[eachPropertyName];
@@ -220,6 +214,9 @@ function copyPropertiesOfObjectTo(from, to)
 
 function objectToString(object)
 {
+    // Checks.
+    if (object == null) return;
+
     var string = '';
 
     // Object

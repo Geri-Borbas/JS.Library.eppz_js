@@ -19,7 +19,7 @@ log('______________________________________________');
 {
     var First = Class.extend
     ({
-        // className: 'First',
+        className: 'First',
         stuff: function(what)
         {
             return '(11)'+what+'(11)';
@@ -28,7 +28,7 @@ log('______________________________________________');
 
     var Second = First.extend
     ({
-        // className: 'Second',
+        className: 'Second',
         stuff: function(what)
         {
             return '(22)'+this.super.stuff(what)+'(22)';
@@ -37,7 +37,7 @@ log('______________________________________________');
 
     var Third = Second.extend
     ({
-        // className: 'Third',
+        className: 'Third',
         stuff: function(what)
         {
             return '(33)'+this.super.stuff(what)+'(33)';
@@ -46,7 +46,7 @@ log('______________________________________________');
 
     var Fourth = Third.extend
     ({
-        // className: 'Fourth',
+        className: 'Fourth',
         stuff: function(what)
         {
             return '(44)'+this.super.stuff(what)+'(44)';

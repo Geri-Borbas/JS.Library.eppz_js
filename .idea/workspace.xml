@@ -2,26 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="634ad747-0992-43fe-a8a9-befdcf12abff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/Testbed/SuperclassValues.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Tools/Class.js" afterPath="$PROJECT_DIR$/Classes/Tools/Class.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Testbed/ClassMethods.js" afterPath="$PROJECT_DIR$/Classes/Testbed/ClassMethods.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Testbed/Inheritance.js" afterPath="$PROJECT_DIR$/Classes/Testbed/Inheritance.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Testbed/Superclass.js" afterPath="$PROJECT_DIR$/Classes/Testbed/Superclass.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Testbed/SuperclassValues.js" afterPath="$PROJECT_DIR$/Classes/Testbed/SuperclassValues.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Tools/helpers.js" afterPath="$PROJECT_DIR$/Classes/Tools/helpers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="eppz!kit.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Class.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389496898864" ignored="false" />
-    <file path="/README.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389497025714" ignored="false" />
+    <file path="/Class.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389564813068" ignored="false" />
+    <file path="/README.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389565488748" ignored="false" />
     <file path="/Inheritance.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389491542629" ignored="false" />
-    <file path="/index.html" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389494946156" ignored="false" />
+    <file path="/index.html" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389562766865" ignored="false" />
     <file path="/Super.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389232132897" ignored="false" />
-    <file path="/Dummy.txt" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389457694478" ignored="false" />
+    <file path="/Dummy.txt" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389562034648" ignored="false" />
     <file path="/Superclass.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389491689960" ignored="false" />
-    <file path="/ClassMethods.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389496030819" ignored="false" />
+    <file path="/ClassMethods.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389564256274" ignored="false" />
     <file path="/Alamo.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389494834728" ignored="false" />
+    <file path="/helpers.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389565529182" ignored="false" />
+    <file path="/SuperclassValues.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389563419893" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +41,44 @@
     <favorites_list name="eppz!kit" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="35" selection-start="276" selection-end="276" vertical-scroll-proportion="-7.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="47" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helpers.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Classes/Tools/helpers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="0" selection-start="3061" selection-end="3061" vertical-scroll-proportion="0.3911735">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eppz!kit.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/Tools/eppz!kit.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="35" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -58,17 +96,17 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Classes/Tools/helpers.js" />
         <option value="$PROJECT_DIR$/Classes/Testbed/Super.js" />
         <option value="$PROJECT_DIR$/Classes/Testbed/Class.js" />
         <option value="$PROJECT_DIR$/Classes/Testbed/Inheritance.js" />
         <option value="$PROJECT_DIR$/Classes/Testbed/Alamo.js" />
-        <option value="$PROJECT_DIR$/Classes/Testbed/SuperclassValues.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Classes/Testbed/Superclass.js" />
-        <option value="$PROJECT_DIR$/Classes/Testbed/ClassMethods.js" />
+        <option value="$PROJECT_DIR$/Classes/Testbed/SuperclassValues.js" />
         <option value="$PROJECT_DIR$/Classes/Tools/Class.js" />
+        <option value="$PROJECT_DIR$/Classes/Testbed/ClassMethods.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/Classes/Tools/helpers.js" />
       </list>
     </option>
   </component>
@@ -110,6 +148,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -166,7 +205,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -174,8 +212,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -250,13 +288,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1467" y="-289" width="1702" height="1156" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1678744" sideWeight="0.67106503" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16968599" sideWeight="0.67106503" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -373,11 +411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Tools/helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="3" selection-start="2050" selection-end="2050" vertical-scroll-proportion="0.7941176" />
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="388" column="19" selection-start="6592" selection-end="6592" vertical-scroll-proportion="0.33333334">
@@ -401,35 +434,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Testbed/SuperclassValues.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="7" selection-start="1476" selection-end="1476" vertical-scroll-proportion="0.26278836">
+        <state line="48" column="9" selection-start="1886" selection-end="1886" vertical-scroll-proportion="0.7221665">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Tools/Class.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="66" selection-start="6306" selection-end="6306" vertical-scroll-proportion="1.6870612">
+        <state line="187" column="64" selection-start="7143" selection-end="7143" vertical-scroll-proportion="0.4884654">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Testbed/ClassMethods.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="27" selection-start="1400" selection-end="1400" vertical-scroll-proportion="0.19133192">
+        <state line="64" column="27" selection-start="2417" selection-end="2417" vertical-scroll-proportion="0.96288866">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Tools/eppz!kit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="35" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="52" selection-start="289" selection-end="289" vertical-scroll-proportion="0.1673428">
+        <state line="12" column="35" selection-start="276" selection-end="276" vertical-scroll-proportion="-7.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="122" selection-end="127" vertical-scroll-proportion="0.089108914">
+        <state line="3" column="47" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Tools/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="0" selection-start="3061" selection-end="3061" vertical-scroll-proportion="0.3911735">
           <folding />
         </state>
       </provider>

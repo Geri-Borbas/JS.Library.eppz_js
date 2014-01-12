@@ -1,17 +1,24 @@
 <html>
 
     <head>
+
+        <!-- eppz!kit -->
+        <script src="Classes/Tools/Helpers.js"></script>
+        <script src="Classes/Tools/Class.js"></script>
+        <script src="Classes/Tools/eppz!kit.js"></script>
+
     </head>
 
-    <!-- Boilerplate -->
-    <script src="Classes/Tools/Class.js"></script>
-    <script src="Classes/Tools/Helpers.js"></script>
-    <script src="Classes/Tools/eppz!kit.js"></script>
+    <body>
+    <script type="text/javascript">
 
-    <!-- Testbed -->
-    <script src="Classes/Testbed/SuperclassValues.js"></script>
-    <script src="Classes/Testbed/Inheritance.js"></script>
-    <script src="Classes/Testbed/Superclass.js"></script>
-    <script src="Classes/Testbed/ClassMethods.js"></script>
+        EPPZ.includeBasePath = 'Classes/Testbed';
+        include('SuperclassValues.js');
+        include('Inheritance.js');
+        include('Superclass.js');
+        include('ClassMethods.js');
+
+    </script>
+    </body>
 
 </html>

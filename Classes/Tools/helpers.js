@@ -9,10 +9,37 @@
  *
  */
 
-//Debug helper.
-debugging = true;
-function log(message)
-{ if (debugging) console.log(message); }
+
+var EPPZ =
+{
+    version: '0.1.1',
+
+    /**
+     * Logging.
+     */
+
+        debugging: true,
+
+        log: function(message)
+        { if (this.debugging) console.log(message); },
+
+
+    /**
+     * Include scripts (use it mostly during development).
+     */
+
+        includeBasePath: '',
+
+        include: function(filePath)
+        {
+            var script = document.createElement('script');
+            script.src = this.includeBasePath+'/'+filePath;
+
+            var head = document.getElementsByTagName('head')[0];
+            head.appendChild(script);
+        }
+
+};
 
 /**
  * An alias for a simple for loop.
@@ -94,3 +121,14 @@ Element.prototype.show = function()
 
 Element.prototype.preventScroll = function()
 { this.addEventListener('touchmove', function(event) { event.preventDefault(); }, false); }
+
+
+/**
+ * Aliases
+ */
+
+function log(message)
+{ EPPZ.log(message); }
+
+function include(filePath)
+{ EPPZ.include(filePath); }

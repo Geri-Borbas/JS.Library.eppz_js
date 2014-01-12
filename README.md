@@ -1,8 +1,20 @@
 Doing:
 
+    + Create user friendly test cases
+        + Lovely ascii art for SuperclassValues
+
     + Class goodies
         + Automatic getter setter generation
         + Automatic enumerators for collections
+
+0.1.1
+
+    + Stable
+        + All tests are passing
+    + Started to factor helpers into an EPPZ object
+        + With some alias defined on Window object
+    + Class method super calls are just fine as well
+
 
 0.1.0
 

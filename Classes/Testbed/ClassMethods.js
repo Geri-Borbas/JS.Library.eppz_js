@@ -33,11 +33,9 @@ log('______________________________');
         {
             instanceWithMillimeters: function(value)
             {
-                log('-------------');
-                log(this.className+' : '+arguments.callee._superClass.className);
-
                 var instance = new this();
-                instance.value = value / 10;
+                instance.value = value;
+                instance.value /= 10;
                 return instance;
             },
         }
@@ -55,10 +53,7 @@ log('______________________________');
         {
             instanceWithMillimeters: function(value)
             {
-                log('-------------');
-                log(this.className+' : '+arguments.callee._superClass.className);
-
-                var instance = new this();
+                var instance = this.super.instanceWithMillimeters(value);
                 instance.value /= 10;
                 return instance;
             }
@@ -77,10 +72,7 @@ log('______________________________');
         {
             instanceWithMillimeters: function(value)
             {
-                log('-------------');
-                log(this.className+' : '+arguments.callee._superClass.className);
-
-                var instance = new this();
+                var instance = this.super.instanceWithMillimeters(value);
                 instance.value /= 10;
                 return instance;
             }
@@ -91,12 +83,15 @@ log('______________________________');
     var millimeters = 1000;
     log('millimeters: '+millimeters);
 
+    log('-------------');
     var centimeters = Centimeters.instanceWithMillimeters(millimeters);
     centimeters.logValue();
 
+    log('-------------');
     var decimeters = Decimeters.instanceWithMillimeters(millimeters);
     decimeters.logValue();
 
+    log('-------------');
     var meters = Meters.instanceWithMillimeters(millimeters);
     meters.logValue();
 
