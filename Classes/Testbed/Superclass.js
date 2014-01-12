@@ -10,58 +10,45 @@
  */
 
 
-log('______________________________');
-log('eppz!js Class superclass calls');
-log('______________________________');
+log('_________________________________');
+log('eppz!js Class // superclass calls');
+log('_________________________________');
 
 
 (function()
 {
     var First = Class.extend
     ({
-        construct: function()
+        stuff: function(what)
         {
-            this.super = function()
-            {
-                var super_ = arguments.callee.caller._super; // Get '_super' reference bound to the calling function.
-                super_.callingInstance = this; // Bind current instance as caller.
-                return super_;
-            };
+            log('Firsty stuff '+what+' (invoked by '+this.className+').');
         },
-
-        stuff: function()
-        {
-            log('Firsty stuff (invoked by '+this.className+').');
-        },
-
     });
 
     var Second = First.extend
     ({
-        stuff: function()
+        stuff: function(what)
         {
-            this.super().stuff();
-            log('Secondy stuff (invoked by '+this.className+').');
+            this.super.stuff(what);
+            log('Secondy stuff '+what+' (invoked by '+this.className+').');
         },
     });
-
 
     var Third = Second.extend
     ({
-        stuff: function()
+        stuff: function(what)
         {
-            this.super().stuff();
-            log('Thirdy stuff (invoked by '+this.className+').');
+            this.super.stuff(what);
+            log('Thirdy stuff '+what+' (invoked by '+this.className+').');
         },
     });
 
-
     var Fourth = Third.extend
     ({
-        stuff: function()
+        stuff: function(what)
         {
-            this.super().stuff();
-            log('Fourthy stuff (invoked by '+this.className+').');
+            this.super.stuff(what);
+            log('Fourthy stuff '+what+' (invoked by '+this.className+').');
         },
     });
 
@@ -71,9 +58,29 @@ log('______________________________');
     var third = new Third();
     var fourth = new Fourth();
 
-    first.stuff();
-    second.stuff();
-    third.stuff();
-    fourth.stuff();
+    first.stuff('it');
+    second.stuff('it');
+    third.stuff('it');
+    fourth.stuff('it');
+
+    /*
+
+        Outputs as:
+
+        Firsty stuff it (invoked by First). Helpers.js:15
+
+        Firsty stuff it (invoked by Second). Helpers.js:15
+        Secondy stuff it (invoked by Second). Helpers.js:15
+
+        Firsty stuff it (invoked by Third). Helpers.js:15
+        Secondy stuff it (invoked by Third). Helpers.js:15
+        Thirdy stuff it (invoked by Third). Helpers.js:15
+
+        Firsty stuff it (invoked by Fourth). Helpers.js:15
+        Secondy stuff it (invoked by Fourth). Helpers.js:15
+        Thirdy stuff it (invoked by Fourth). Helpers.js:15
+        Fourthy stuff it (invoked by Fourth).
+
+    */
 
 })();

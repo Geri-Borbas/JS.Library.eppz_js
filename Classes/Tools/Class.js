@@ -88,6 +88,14 @@ Class.extend = function(implementation)
             // Equip constants.
             copyPropertiesOfObjectTo(implementation, this);
 
+            // Add awesome getter for 'super'.
+            Object.defineProperty(this, 'super', { get : function()
+            {
+                var super_ = arguments.callee.caller._super; // Get '_super' reference bound to the calling function.
+                super_.callingInstance = this; // Bind current instance as caller.
+                return super_;
+            }});
+
             this.construct.apply(this, arguments);
         };
 

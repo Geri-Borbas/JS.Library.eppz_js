@@ -1,12 +1,12 @@
 Doing:
 
-    + Some test case fails
-        + Superclass.js fails (while Class.js workds)
-
     + Class goodies
         + Automatic getter setter generation
         + Automatic enumerators for collections
 
+0.0.9
+
+    + Added awesome super getter
 
 0.0.8
 

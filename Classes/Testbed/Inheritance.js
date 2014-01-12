@@ -10,9 +10,9 @@
  */
 
 
-log('_________________________');
-log('eppz!js Class inheritance');
-log('_________________________');
+log('____________________________');
+log('eppz!js Class // inheritance');
+log('____________________________');
 
 
 (function()
@@ -35,6 +35,7 @@ log('_________________________');
         { log(this.className+' can do anywhere.'); },
 
     });
+
 
     var a = new A();
         a.aCanDo();
