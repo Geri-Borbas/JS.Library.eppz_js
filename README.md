@@ -6,14 +6,14 @@ Objective-JavaScript. To the limits.
 
 ## Version tracking
 
-#### Doing
-
-+ Create user friendly test cases
-    + Lovely ascii art for SuperclassValues
-
-+ Class goodies
-    + Automatic getter setter generation
-    + Automatic enumerators for collections
+> #### Doing
+>
+> + Create user friendly test cases
+>   + Lovely ascii art for SuperclassValues
+>
+> + Class goodies
+>   + Automatic getter setter generation
+>   + Automatic enumerators for collections
 
 
 #### 0.1.1
