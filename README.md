@@ -1,7 +1,37 @@
 eppz!js
 =======
 
-Objective-JavaScript. To the limits.
+**Objective-JavaScript.** To the limits. 
+
+Inheritance (of course)? Missing class methods? Want to make reliable `super` calls? Even in class methods? See class type in inspector? Correct results for `constructor.name`? Property definitions outside constructor? I do. So I created this `Class`.
+
+Like/use objective programming? You'll like this.
+
+
+# Usage
+
+```JavaScript
+// Imaginary Scene class.
+var Scene = Class.extend
+({
+    // Properties (with default values).
+    name: 'Starting',
+    id: null,
+    
+    // Constructor (called along 'new' calls)
+    construct: function(id)
+    {
+        this.id = id;
+    },
+    
+    presentInView: function(presentingView)
+    {
+        presentingView.present(this);
+    },
+});
+
+var scene = new Scene('scene_1');
+```
 
 
 ## Version tracking
