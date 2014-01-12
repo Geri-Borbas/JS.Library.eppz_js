@@ -109,3 +109,7 @@ var scene = new Scene('scene_1');
 > #### 0.0.1
 > 
 > + Class inheritance done
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/eppz/eppz-js/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
