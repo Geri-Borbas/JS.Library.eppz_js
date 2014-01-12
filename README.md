@@ -111,5 +111,8 @@ var scene = new Scene('scene_1');
 > + Class inheritance done
 
 
+#### License
+> Licensed under the [Open Source MIT license](http://en.wikipedia.org/wiki/MIT_License).
+
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/eppz/eppz-js/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
