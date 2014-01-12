@@ -10,42 +10,107 @@ Like/use objective programming? You'll like this. **A single file called [`Class
 
 # Usage
 
+
+Creating classes, and instances are pretty straightforward.
 ```JavaScript
-// Imaginary Scene class.
-var Scene = Class.extend
+// An imaginary View class.
+var View = Class.extend
 ({
-    // Properties (with default values).
-    name: 'Starting',
-    id: null,
-    
-    // Constructor (called along 'new' calls)
-    construct: function(id)
+    id: '',
+    className: '',
+    div: null,
+
+    construct: function(id, className)
     {
         this.id = id;
+        this.className = className;
+
+        this.build();
     },
     
-    presentInView: function(presentingView)
+    build: function()
     {
-        presentingView.present(this);
+        this.div = document.createElement('div');
+        this.div.id = this.id;
+        this.div.className = this.className;
     },
 });
 
-var scene = new Scene('scene_1');
+var widget = new View('widget_1', 'widget');
+console.log(widget.id); // widget_1
+```
+
+
+Extend classes as well.
+```JavaScript
+// An imaginary Widget class, subclass of View.
+var Widget = View.extend
+({
+    construct: function(number)
+    {
+        this.id = 'widget_'+number;
+        this.className = 'widget';
+
+        this.build();
+    },
+});
+
+var widget = new Widget(1);
+console.log(widget.id); // widget_1
+```
+
+
+Better using superclass implementation for maintainability, safety and peace.
+```JavaScript
+// With super calls.
+var Widget = View.extend
+({
+    construct: function(number)
+    {
+        this.super.construct('widget_'+number, 'widget');
+    },
+});
+
+var widget = new Widget(1);
+console.log(widget.id); // widget_1
+```
+
+
+Or using class methods for factories and more.
+```JavaScript
+// Cool factory methods.
+var Widget = View.extend
+({
+    // No instance methods implemented.
+},
+{
+    widgetWithNumber: function(number)
+    {
+        return new this('widget_'+number, 'widget');
+    }
+});
+
+var widget = Widget.widgetWithNumber(1);
+console.log(widget.id); // widget_1
 ```
 
 
 ## Version tracking
 
-> #### Doing
->
-> + Create user friendly test cases
->   + Lovely ascii art for SuperclassValues
->
-> + Class goodies
->   + Automatic getter setter generation
->   + Automatic enumerators for collections
-> 
-> 
+#### Doing
+
++ Refactor className property
+    + Create class property for instances
+    + Create name property for classes
+    + Same for `super` proxy object
+
++ Create user friendly test cases
+    + Lovely ascii art for SuperclassValues
+
++ Class goodies
+    + Automatic getter setter generation
+    + Automatic enumerators for collections (!)
+
 > #### 0.1.1
 > 
 > + Stable
@@ -69,7 +134,7 @@ var scene = new Scene('scene_1');
 > #### 0.0.8
 > 
 > + Best approach so far
->   + Partly factored back to 'extend'
+>   + Partly factored back to `extend`
 >   + Only super calls have to be centralized
 >   + Now its all wrapped up into a function
 > 
@@ -82,7 +147,7 @@ var scene = new Scene('scene_1');
 > #### 0.0.6
 > 
 > + Super calls are now working
->   + Really sketched on client side, needs to be factored back to 'extend'
+>   + Really sketched on client side, needs to be factored back to `extend`
 > 
 > 
 > #### 0.0.5
@@ -103,7 +168,7 @@ var scene = new Scene('scene_1');
 > 
 > #### 0.0.2
 > 
-> + Hooked in 'super' method calls with correct 'this' reference within.
+> + Hooked in `super` method calls with correct `this` reference within.
 >  
 > 
 > #### 0.0.1
