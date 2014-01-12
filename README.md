@@ -1,7 +1,7 @@
 eppz!js
 =======
 
-**Objective-JavaScript.** To the limits. 
+**Objective-JavaScript** for everyday use.
 
 Inheritance (of course)? Missing class methods? Want to make reliable `super` calls? Even in class methods? See class type in inspector? Correct results for `constructor.name`? Property definitions outside constructor? I do. So I created this `Class`.
 
