@@ -1,11 +1,17 @@
+eppz!js
+=======
+
+Objective-JavaScript. To the limits.
+
+
 #### Doing
 
-    * Create user friendly test cases
-        + Lovely ascii art for SuperclassValues
+* Create user friendly test cases
++ Lovely ascii art for SuperclassValues
 
-    * Class goodies
-        + Automatic getter setter generation
-        + Automatic enumerators for collections
+* Class goodies
++ Automatic getter setter generation
++ Automatic enumerators for collections
 
 0.1.1
 
