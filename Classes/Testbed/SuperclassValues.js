@@ -10,49 +10,46 @@
  */
 
 
-log('_________________________________');
-log('eppz!js Class // superclass calls');
-log('_________________________________');
+log('______________________________________________');
+log('eppz!js Class // superclass call return values');
+log('______________________________________________');
 
 
 (function()
 {
     var First = Class.extend
     ({
-        className: 'First',
+        // className: 'First',
         stuff: function(what)
         {
-            log('Firsty stuff '+what+' (invoked by '+this.className+').');
+            return '(11)'+what+'(11)';
         },
     });
 
     var Second = First.extend
     ({
-        className: 'Second',
+        // className: 'Second',
         stuff: function(what)
         {
-            this.super.stuff(what);
-            log('Secondy stuff '+what+' (invoked by '+this.className+').');
+            return '(22)'+this.super.stuff(what)+'(22)';
         },
     });
 
     var Third = Second.extend
     ({
-        className: 'Third',
+        // className: 'Third',
         stuff: function(what)
         {
-            this.super.stuff(what);
-            log('Thirdy stuff '+what+' (invoked by '+this.className+').');
+            return '(33)'+this.super.stuff(what)+'(33)';
         },
     });
 
     var Fourth = Third.extend
     ({
-        className: 'Fourth',
+        // className: 'Fourth',
         stuff: function(what)
         {
-            this.super.stuff(what);
-            log('Fourthy stuff '+what+' (invoked by '+this.className+').');
+            return '(44)'+this.super.stuff(what)+'(44)';
         },
     });
 
@@ -62,29 +59,29 @@ log('_________________________________');
     var third = new Third();
     var fourth = new Fourth();
 
-    first.stuff('it');
-    second.stuff('it');
-    third.stuff('it');
-    fourth.stuff('it');
+    log(first.stuff('it'));
+    log(second.stuff('it'));
+    log(third.stuff('it'));
+    log(fourth.stuff('it'));
 
     /*
 
-        Outputs as:
+     Outputs as:
 
-        Firsty stuff it (invoked by First). Helpers.js:15
+     Firsty stuff it (invoked by First). Helpers.js:15
 
-        Firsty stuff it (invoked by Second). Helpers.js:15
-        Secondy stuff it (invoked by Second). Helpers.js:15
+     Firsty stuff it (invoked by Second). Helpers.js:15
+     Secondy stuff it (invoked by Second). Helpers.js:15
 
-        Firsty stuff it (invoked by Third). Helpers.js:15
-        Secondy stuff it (invoked by Third). Helpers.js:15
-        Thirdy stuff it (invoked by Third). Helpers.js:15
+     Firsty stuff it (invoked by Third). Helpers.js:15
+     Secondy stuff it (invoked by Third). Helpers.js:15
+     Thirdy stuff it (invoked by Third). Helpers.js:15
 
-        Firsty stuff it (invoked by Fourth). Helpers.js:15
-        Secondy stuff it (invoked by Fourth). Helpers.js:15
-        Thirdy stuff it (invoked by Fourth). Helpers.js:15
-        Fourthy stuff it (invoked by Fourth).
+     Firsty stuff it (invoked by Fourth). Helpers.js:15
+     Secondy stuff it (invoked by Fourth). Helpers.js:15
+     Thirdy stuff it (invoked by Fourth). Helpers.js:15
+     Fourthy stuff it (invoked by Fourth).
 
-    */
+     */
 
 })();

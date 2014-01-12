@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="634ad747-0992-43fe-a8a9-befdcf12abff" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Classes/Testbed/Class.js" afterPath="$PROJECT_DIR$/Classes/Testbed/ClassMethods.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/Testbed/SuperclassValues.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Tools/Class.js" afterPath="$PROJECT_DIR$/Classes/Tools/Class.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Testbed/ClassMethods.js" afterPath="$PROJECT_DIR$/Classes/Testbed/ClassMethods.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Testbed/Inheritance.js" afterPath="$PROJECT_DIR$/Classes/Testbed/Inheritance.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Testbed/Superclass.js" afterPath="$PROJECT_DIR$/Classes/Testbed/Superclass.js" />
@@ -12,14 +13,15 @@
     </list>
     <ignored path="eppz!kit.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Class.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389485075171" ignored="false" />
-    <file path="/README.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389485930914" ignored="false" />
-    <file path="/Inheritance.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389476364252" ignored="false" />
-    <file path="/index.html" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389482497587" ignored="false" />
+    <file path="/Class.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389496898864" ignored="false" />
+    <file path="/README.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389497025714" ignored="false" />
+    <file path="/Inheritance.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389491542629" ignored="false" />
+    <file path="/index.html" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389494946156" ignored="false" />
     <file path="/Super.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389232132897" ignored="false" />
     <file path="/Dummy.txt" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389457694478" ignored="false" />
-    <file path="/Superclass.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389485490328" ignored="false" />
-    <file path="/ClassMethods.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389485837368" ignored="false" />
+    <file path="/Superclass.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389491689960" ignored="false" />
+    <file path="/ClassMethods.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389496030819" ignored="false" />
+    <file path="/Alamo.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389494834728" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,62 +40,7 @@
     <favorites_list name="eppz!kit" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Class.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/Tools/Class.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="45" selection-start="3860" selection-end="3860" vertical-scroll-proportion="-25.8">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Inheritance.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/Testbed/Inheritance.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="26" selection-start="1231" selection-end="1231" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Superclass.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/Testbed/Superclass.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="35" selection-start="1556" selection-end="1556" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassMethods.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/Testbed/ClassMethods.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="39" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="59" selection-start="413" selection-end="413" vertical-scroll-proportion="-8.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="122" selection-end="127" vertical-scroll-proportion="0.089108914">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -114,11 +61,13 @@
         <option value="$PROJECT_DIR$/Classes/Tools/helpers.js" />
         <option value="$PROJECT_DIR$/Classes/Testbed/Super.js" />
         <option value="$PROJECT_DIR$/Classes/Testbed/Class.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Classes/Testbed/Inheritance.js" />
-        <option value="$PROJECT_DIR$/Classes/Tools/Class.js" />
-        <option value="$PROJECT_DIR$/Classes/Testbed/ClassMethods.js" />
+        <option value="$PROJECT_DIR$/Classes/Testbed/Alamo.js" />
+        <option value="$PROJECT_DIR$/Classes/Testbed/SuperclassValues.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Classes/Testbed/Superclass.js" />
+        <option value="$PROJECT_DIR$/Classes/Testbed/ClassMethods.js" />
+        <option value="$PROJECT_DIR$/Classes/Tools/Class.js" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -301,13 +250,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1467" y="-289" width="1702" height="1156" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13103865" sideWeight="0.67106503" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1678744" sideWeight="0.67106503" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -438,35 +387,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Testbed/Inheritance.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="26" selection-start="1231" selection-end="1231" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Tools/Class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="45" selection-start="3860" selection-end="3860" vertical-scroll-proportion="-25.8">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="59" selection-start="413" selection-end="413" vertical-scroll-proportion="-8.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Testbed/ClassMethods.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="39" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.0">
+        <state line="33" column="20" selection-start="1559" selection-end="1559" vertical-scroll-proportion="0.49648947">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Testbed/Superclass.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="35" selection-start="1556" selection-end="1556" vertical-scroll-proportion="0.0">
+        <state line="53" column="27" selection-start="2079" selection-end="2079" vertical-scroll-proportion="0.38314945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Testbed/SuperclassValues.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="7" selection-start="1476" selection-end="1476" vertical-scroll-proportion="0.26278836">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Tools/Class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="66" selection-start="6306" selection-end="6306" vertical-scroll-proportion="1.6870612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Testbed/ClassMethods.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="27" selection-start="1400" selection-end="1400" vertical-scroll-proportion="0.19133192">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="52" selection-start="289" selection-end="289" vertical-scroll-proportion="0.1673428">
           <folding />
         </state>
       </provider>

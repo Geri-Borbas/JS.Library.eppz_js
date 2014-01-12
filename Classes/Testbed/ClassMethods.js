@@ -17,75 +17,87 @@ log('______________________________');
 
 (function ()
 {
-
-    log('...');
-    return;
-
-    var BaseClass = Class.extend
+    var Centimeters = Class.extend
     (
-        /**
-         * Constants
-         */
-
-        /**
-         * Instance methods (this refers to an instance)
-         */
-
+        // Instance methods (this refers to an instance)
         {
             // Properties can be declared this way as well.
-            value: 1,
+            className: 'Centimeters',
+            value: 0,
 
             logValue: function()
-            { log(this.value); },
+            { log(this.className+'.value: '+this.value); },
         },
 
-        /**
-         * Class methods (this refers to the class)
-         */
-
+        // Class methods (this refers to the class)
         {
-            instanceWithValue: function(value)
+            instanceWithMillimeters: function(value)
             {
+                log('-------------');
+                log(this.className+' : '+arguments.callee._superClass.className);
+
                 var instance = new this();
-                instance.value = value;
+                instance.value = value / 10;
                 return instance;
             },
         }
     );
 
-    var Centurio = BaseClass.extend
+    var Decimeters = Centimeters.extend
     (
-        { value: 2, },
-
+        // Instance methods
         {
-            instanceWithValue: function(value)
+            className: 'Decimeters',
+            value: 0,
+        },
+
+        // Class methods
+        {
+            instanceWithMillimeters: function(value)
             {
+                log('-------------');
+                log(this.className+' : '+arguments.callee._superClass.className);
+
                 var instance = new this();
-                instance.value = value * 10;
+                instance.value /= 10;
+                return instance;
+            }
+        }
+    );
+
+    var Meters = Decimeters.extend
+    (
+        // Instance methods
+        {
+            className: 'Meters',
+            value: 0,
+        },
+
+        // Class methods
+        {
+            instanceWithMillimeters: function(value)
+            {
+                log('-------------');
+                log(this.className+' : '+arguments.callee._superClass.className);
+
+                var instance = new this();
+                instance.value /= 10;
                 return instance;
             }
         }
     );
 
 
-    var Milleneo = Centurio.extend
-    ({
-        _instanceWithValue: function(value)
-        {
-            var instance = this.super().instanceWithValue(value);
-            instance.value *= 10;
-            return instance;
-        }
-    });
+    var millimeters = 1000;
+    log('millimeters: '+millimeters);
 
-    var baseClassInstance = BaseClass.instanceWithValue(10);
-    baseClassInstance.logValue();
+    var centimeters = Centimeters.instanceWithMillimeters(millimeters);
+    centimeters.logValue();
 
-    var centurio = Centurio.instanceWithValue(10);
-    centurio.logValue();
+    var decimeters = Decimeters.instanceWithMillimeters(millimeters);
+    decimeters.logValue();
 
-    var milleneo = Milleneo.instanceWithValue(10);
-    milleneo.logValue();
+    var meters = Meters.instanceWithMillimeters(millimeters);
+    meters.logValue();
 
 })();
-

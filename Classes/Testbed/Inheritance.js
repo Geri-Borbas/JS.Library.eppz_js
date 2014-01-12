@@ -19,18 +19,21 @@ log('____________________________');
 {
     var A = Class.extend
     ({
+        className: 'A',
         aCanDo: function()
         { log(this.className+' can do here.'); },
     });
 
     var B = A.extend
     ({
+        className: 'B',
         bCanDo: function()
         { log(this.className+' can do there.'); },
     });
 
     var C = B.extend
     ({
+        className: 'C',
         cCanDo: function()
         { log(this.className+' can do anywhere.'); },
 

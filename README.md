@@ -4,6 +4,11 @@ Doing:
         + Automatic getter setter generation
         + Automatic enumerators for collections
 
+0.1.0
+
+    + Fixed return values from super proxies
+    + Class method _superClass pointers are misaligned
+
 0.0.9
 
     + Added awesome super getter

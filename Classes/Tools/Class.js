@@ -19,34 +19,20 @@ Class.className = 'Class';
 /**
  *
  * Creates a class with the given implementations.
- * Add a class method called 'extend'.
- * Add an superclass reference called 'super'.
  *
- * @param implementation An object with all the class implementation.
- * Can define properties, instance methods (function properties),
- * and class methods (function properties prefixed with '_').
+ * Adds a class method called 'extend'.
+ * Adds an instance property called 'super'.
  *
- * Identical class implementation will have identical class names.
+ * @param instanceMethods An object with all the instance methods and properties.
+ * @param classMethods An object with all the class methods and properties.
+ *
+ * With some dirty magic class will have the name of the variable you assign it to.
+ * Identical class implementations will have identical class names.
  *
  */
-Class.extend = function(implementation)
+
+Class.extend = function(instanceMethods, classMethods)
 {
-    /**
-     * Get class name (in a relentlessly hacky way).
-     * Textual search for the implementation in the code of the calling function,
-     * then carefully crawl towards the variable name.
-     */
-
-        implementationString = stripAlmostEverything(objectToString(implementation));
-        declarationString = stripAlmostEverything(arguments.callee.caller.toString());
-
-        ____ = declarationString.split(implementationString)[0];
-        ___ = ____.split('=');
-        __ = ___[___.length - 2];
-        _ = __.split('var');
-        newClassName = _[_.length-1];
-
-
     /**
      * Create 'super' proxy object.
      * Wraps methods into a function that calls appropriate implementation always with the caller as 'this'.
@@ -55,29 +41,52 @@ Class.extend = function(implementation)
         var _super = new Object;
             _super.className = this.className;
 
-        for (var eachMethodName in this.prototype)
-        {
-            var eachMethod = this.prototype[eachMethodName];
-            if (eachMethod instanceof Function == false) continue;
-
-            _super[eachMethodName] = function()
+            // Instance methods
+            for (var eachMethodName in this.prototype)
             {
-                var methodName = arguments.callee.methodName;
-                var superclassInstance = arguments.callee.superclassInstance;
-                var callingInstance = this.callingInstance;
+                var eachMethod = this.prototype[eachMethodName];
+                if (eachMethod instanceof Function == false) continue;
 
-                superclassInstance[methodName].apply(callingInstance, arguments);
+                // Create proxy function with the same name.
+                _super[eachMethodName] = function()
+                {
+                    var methodName = arguments.callee.methodName;
+                    var superclassInstance = arguments.callee.superclassInstance;
+                    var callingInstance = this.callingInstance;
+
+                    // Call superclass implementation with calling instance as this.
+                    return superclassInstance[methodName].apply(callingInstance, arguments);
+                }
+                _super[eachMethodName].methodName = eachMethodName;
+                _super[eachMethodName].superclassInstance = this.prototype;
             }
-            _super[eachMethodName].methodName = eachMethodName;
-            _super[eachMethodName].superclassInstance = this.prototype;
-        }
+
+            // Class methods
+            for (var eachMethodName in this)
+            {
+                var eachMethod = this[eachMethodName];
+                if (eachMethod instanceof Function == false) continue;
+
+                // Create proxy function with the same name.
+                _super[eachMethodName] = function()
+                {
+                    var methodName = arguments.callee.methodName;
+                    var superclassInstance = arguments.callee.superclassInstance;
+                    var callingInstance = this.callingInstance;
+
+                    log('Calling on '+superclassInstance.className);
+
+                    // Call superclass implementation with calling instance as this.
+                    return superclassInstance[methodName].apply(callingInstance, arguments);
+                }
+                _super[eachMethodName].methodName = eachMethodName;
+                _super[eachMethodName].superclassInstance = this;
+            }
 
 
     /**
      * Create the new class (also in a resolutely hacky way).
-     * Constructor name is set for the constructor function at declaration time, so eval() comes handy below.
-     *
-     * Seems a bit expensive: http://jsperf.com/eppz-class-creation (may turn it off in production).
+     * Constructor name may set for the constructor function at declaration time, so eval() comes handy below.
      */
 
         var constructorFunction = function()
@@ -86,9 +95,9 @@ Class.extend = function(implementation)
             if(arguments[0] == "skip") return;
 
             // Equip constants.
-            copyPropertiesOfObjectTo(implementation, this);
+            copyPropertiesOfObjectTo(instanceMethods, this);
 
-            // Add awesome getter for 'super'.
+            // Add getter for 'super'.
             Object.defineProperty(this, 'super', { get : function()
             {
                 var super_ = arguments.callee.caller._super; // Get '_super' reference bound to the calling function.
@@ -99,8 +108,25 @@ Class.extend = function(implementation)
             this.construct.apply(this, arguments);
         };
 
-        eval('var '+newClassName+' = '+constructorFunction.toString());
-        eval('var Class = '+newClassName+';');
+        // Determine class name.
+        var newClassName = null;
+        if (instanceMethods.className != null && newClassName == null) newClassName = instanceMethods.className;
+        if (classMethods != null && classMethods.className != null && newClassName == null) newClassName = classMethods.className;
+        if (newClassName == null) newClassName = 'Class';
+
+            // Using static class name (blazing fast).
+            if (newClassName == 'Class')
+            {
+                var Class = constructorFunction;
+            }
+
+            // Using user defined class name (slower by 100%).
+            // See http://jsperf.com/eppz-class-creation
+            else
+            {
+                eval('var '+newClassName+' = '+constructorFunction.toString());
+                eval('var Class = '+newClassName+';');
+            }
 
 
     /**
@@ -115,17 +141,25 @@ Class.extend = function(implementation)
             Class.prototype = new this("skip");
 
             // Equip implemented instance methods (overwrite inherited).
-            copyMethodsOfObjectTo(implementation, Class.prototype, _super);
+            copyMethodsOfObjectTo(instanceMethods, Class.prototype, _super);
 
         /**
          * Class
          */
 
             // Inherit current class methods.
-            copyMethodsOfObjectTo(this, Class, _super);
+            copyClassMethodsOfObjectTo(this, Class, _super);
 
             // Equip implemented class methods (overwirite inherited).
-            copyClassMethodsOfObjectTo(implementation, Class, _super);
+            copyClassMethodsOfObjectTo(classMethods, Class, _super);
+
+            // Add getter for 'super'.
+            Class.super = function()
+            {
+                var super_ = arguments.callee.caller._superClass; // Get '_super' reference bound to the calling function.
+                super_.callingInstance = this; // Bind current instance as caller.
+                return super_;
+            };
 
 
     /**
@@ -154,7 +188,6 @@ function copyMethodsOfObjectTo(from, to, _super)
     {
         var eachMethod = from[eachMethodName];
         if (eachMethod instanceof Function == false) continue;
-        if (eachMethodName.charAt(0) == classMethodNamePrefix) continue;
 
         to[eachMethodName] = eachMethod;
         to[eachMethodName]._super = _super;
@@ -168,10 +201,9 @@ function copyClassMethodsOfObjectTo(from, to, _super)
     {
         var eachMethod = from[eachMethodName];
         if (eachMethod instanceof Function == false) continue;
-        if (eachMethodName.charAt(0) !== classMethodNamePrefix) continue;
 
-        to[eachMethodName.substring(1)] = eachMethod;
-        to[eachMethodName.substring(1)]._super = _super;
+        to[eachMethodName] = eachMethod;
+        to[eachMethodName]._superClass = _super;
     }
 }
 
