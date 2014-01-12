@@ -13,7 +13,8 @@ Objective-JavaScript. To the limits.
     + Automatic getter setter generation
     + Automatic enumerators for collections
 
-0.1.1
+
+#### 0.1.1
 
     + Stable
         + All tests are passing
@@ -22,48 +23,57 @@ Objective-JavaScript. To the limits.
     + Class method super calls are just fine as well
 
 
-0.1.0
+#### 0.1.0
 
     + Fixed return values from super proxies
     + Class method _superClass pointers are misaligned
 
-0.0.9
+
+#### 0.0.9
 
     + Added awesome super getter
 
-0.0.8
 
-    + Best approach so far
-        + Partly factored back to 'extend'
-        + Only super calls have to be centralized
-        + Now its all wrapped up into a function
+#### 0.0.8
 
-0.0.7
++ Best approach so far
+    + Partly factored back to 'extend'
+    + Only super calls have to be centralized
+    + Now its all wrapped up into a function
 
-    + Another working sketch
 
-0.0.6
+#### 0.0.7
 
-    + Super calls are now working
-        + Really sketched on client side, needs to be factored back to 'extend'
++ Another working sketch
 
-0.0.5
 
-    + Factoring
-        + Equipment is done from one implementation object
+#### 0.0.6
 
-0.0.4
++ Super calls are now working
+    + Really sketched on client side, needs to be factored back to 'extend'
 
-    + Misspelling gone
 
-0.0.3
+#### 0.0.5
 
-    + Some wording (actually not works yet)
++ Factoring
+    + Equipment is done from one implementation object
 
-0.0.2
 
-    + Hooked in 'super' method calls with correct 'this' reference within.
+#### 0.0.4
 
-0.0.1
++ Misspelling gone
 
-    + Class inheritance done
+
+#### 0.0.3
+
++ Some wording (actually not works yet)
+ 
+
+#### 0.0.2
+
++ Hooked in 'super' method calls with correct 'this' reference within.
+
+
+#### 0.0.1
+
++ Class inheritance done
