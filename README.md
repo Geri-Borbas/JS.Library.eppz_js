@@ -17,14 +17,11 @@ Creating classes, and instances are pretty straightforward.
 var View = Class.extend
 ({
     id: '',
-    className: '',
     div: null,
 
-    construct: function(id, className)
+    construct: function(id)
     {
         this.id = id;
-        this.className = className;
-
         this.build();
     },
     
@@ -32,11 +29,10 @@ var View = Class.extend
     {
         this.div = document.createElement('div');
         this.div.id = this.id;
-        this.div.className = this.className;
     },
 });
 
-var widget = new View('widget_1', 'widget');
+var widget = new View('widget_1');
 console.log(widget.id); // widget_1
 ```
 
@@ -49,8 +45,6 @@ var Widget = View.extend
     construct: function(number)
     {
         this.id = 'widget_'+number;
-        this.className = 'widget';
-
         this.build();
     },
 });
@@ -67,7 +61,7 @@ var Widget = View.extend
 ({
     construct: function(number)
     {
-        this.super.construct('widget_'+number, 'widget');
+        this.super.construct('widget_'+number);
     },
 });
 
@@ -86,7 +80,7 @@ var Widget = View.extend
 {
     widgetWithNumber: function(number)
     {
-        return new this('widget_'+number, 'widget');
+        return new this('widget_'+number);
     }
 });
 
