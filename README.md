@@ -3,7 +3,7 @@ eppz!js
 
 **Objective-JavaScript** for everyday use.
 
-Inheritance (of course)? Missing class methods? Want to make reliable `super` calls? Even in class methods? See class type in inspector? Correct results for `constructor.name`? Property definitions outside constructor? I do. So I created this `Class`.
+Inheritance (of course)? Missing class methods? Want to make reliable `super` calls? Even in class methods? See class type in inspector? Correct results for `constructor.name`? Property definitions outside constructor? I do.
 
 Like/use objective programming? You'll like this. **A single file called [`Class.js`](https://github.com/eppz/eppz-js/blob/master/Classes/Tools/Class.js)** is what you're looking for.
 
