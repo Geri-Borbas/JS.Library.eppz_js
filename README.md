@@ -4,12 +4,14 @@ eppz!js
 Objective-JavaScript. To the limits.
 
 
+## Version tracking
+
 #### Doing
 
-* Create user friendly test cases
++ Create user friendly test cases
     + Lovely ascii art for SuperclassValues
 
-* Class goodies
++ Class goodies
     + Automatic getter setter generation
     + Automatic enumerators for collections
 
