@@ -215,5 +215,7 @@ Beside this `Class` implementation this repository collects some tools for every
 #### License
 > Licensed under the [Open Source MIT license](http://en.wikipedia.org/wiki/MIT_License).
 
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/02949f8d26ad5362c8cbed6962cef669 "githalytics.com")](http://githalytics.com/eppz/eppz-js)
+
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/eppz/eppz-js/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
