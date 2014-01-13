@@ -118,6 +118,8 @@ console.log(widget.getColorDescription()); // As you would expect. My color is B
 ```
 There are class implementations out there that would output `Default` as color here. Actually the main reason I made this `Class` implementation was to get over this issue.
 
+This method works over **any amount of cascading super calls**, as super references are bound right to the functions instead of the calling instance. Passing over the calling instance is done by a proxy object that wraps every superclass method into a function that does the job. See the [implementation](https://github.com/eppz/eppz-js/blob/master/Classes/Tools/Class.js) for further details if interested at all.
+
 
 ## Version tracking
 
