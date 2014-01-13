@@ -11,7 +11,7 @@ Like/use objective programming? You'll like this. **A single file called [`Class
 # Usage
 
 
-Creating classes, and instances are pretty straightforward.
+**Creating classes**, and instances are pretty straightforward.
 ```JavaScript
 // An imaginary View class.
 var View = Class.extend
@@ -37,7 +37,7 @@ console.log(widget.id); // widget_1
 ```
 
 
-Extend classes as well.
+**Extend classes** as well.
 ```JavaScript
 // An imaginary Widget class, subclass of View.
 var Widget = View.extend
@@ -54,7 +54,7 @@ console.log(widget.id); // widget_1
 ```
 
 
-Better using superclass implementation for maintainability, safety and peace.
+Better using **superclass implementation** for maintainability, safety and peace.
 ```JavaScript
 // With super calls.
 var Widget = View.extend
@@ -70,7 +70,7 @@ console.log(widget.id); // widget_1
 ```
 
 
-Or using class methods for factories and more.
+Or using **class methods** for factories and more.
 ```JavaScript
 // Cool factory methods.
 var Widget = View.extend
@@ -87,6 +87,36 @@ var Widget = View.extend
 var widget = Widget.widgetWithNumber(1);
 console.log(widget.id); // widget_1
 ```
+
+
+## `super` calls
+
+Many JavaScript class implementation does not take care of passing the correct `this` reference (calling instance) for superclass method calls. With eppz!js Class your `super` calls works as you'd expect.
+```JavaScript
+var Widget = View.extend
+({
+    color: 'Default',
+
+    getColorDescription: function()
+    {
+        return 'My color is '+this.color+'.';
+    }
+});
+
+var BlueWidget = View.extend
+({
+    color: 'Blue',
+
+    getColorDescription: function()
+    {
+        return 'As you would expect. '+this.super.getColorDescription();
+    }
+});
+
+var widget = new BlueWidget();
+console.log(widget.getColorDescription()); // As you would expect. My color is Blue.
+```
+There are class implementations out there that would output `Default` as color here.
 
 
 ## Version tracking
