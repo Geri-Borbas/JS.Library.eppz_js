@@ -2,21 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="634ad747-0992-43fe-a8a9-befdcf12abff" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/eppz!kit/Element.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/eppz!kit.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/Tools/eppz!kit.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Classes/Tools/Class.js" afterPath="$PROJECT_DIR$/Classes/eppz!kit/Class.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Classes/Tools/helpers.js" afterPath="$PROJECT_DIR$/Classes/eppz!kit/Array.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="eppz!kit.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Class.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389564813068" ignored="false" />
-    <file path="/README.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389576179749" ignored="false" />
+    <file path="/README.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389579669692" ignored="false" />
     <file path="/Inheritance.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389491542629" ignored="false" />
-    <file path="/index.html" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389562766865" ignored="false" />
+    <file path="/index.html" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389578987809" ignored="false" />
     <file path="/Super.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389232132897" ignored="false" />
-    <file path="/Dummy.txt" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389576064027" ignored="false" />
+    <file path="/Dummy.txt" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389578413684" ignored="false" />
     <file path="/Superclass.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389491689960" ignored="false" />
     <file path="/ClassMethods.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389564256274" ignored="false" />
     <file path="/Alamo.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389494834728" ignored="false" />
     <file path="/helpers.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389565529182" ignored="false" />
     <file path="/SuperclassValues.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389563419893" ignored="false" />
+    <file path="/eppz!kit.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389579143770" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,13 +44,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="148" column="1" selection-start="3764" selection-end="3764" vertical-scroll-proportion="-20.0">
+              <folding />
+            </state>
+          </provider>
           <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eppz!kit.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Classes/eppz!kit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="171" selection-start="2748" selection-end="2748" vertical-scroll-proportion="0.52061856">
+            <state line="14" column="19" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.14242728">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="51" selection-start="97" selection-end="97" vertical-scroll-proportion="-3.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Class.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/eppz!kit/Class.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="3" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Array.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/eppz!kit/Array.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SuperclassValues.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/Testbed/SuperclassValues.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="9" selection-start="1886" selection-end="1886" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Element.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/eppz!kit/Element.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="125" column="0" selection-start="4056" selection-end="4056" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -72,11 +134,15 @@
         <option value="$PROJECT_DIR$/Classes/Testbed/Alamo.js" />
         <option value="$PROJECT_DIR$/Classes/Testbed/Superclass.js" />
         <option value="$PROJECT_DIR$/Classes/Testbed/SuperclassValues.js" />
-        <option value="$PROJECT_DIR$/Classes/Tools/Class.js" />
         <option value="$PROJECT_DIR$/Classes/Testbed/ClassMethods.js" />
-        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/Classes/Tools/Class.js" />
+        <option value="$PROJECT_DIR$/Classes/eppz!kit/Element.js" />
+        <option value="$PROJECT_DIR$/Classes/eppz!kit/Array.js" />
         <option value="$PROJECT_DIR$/Classes/Tools/helpers.js" />
+        <option value="$PROJECT_DIR$/Classes/Tools/eppz!kit.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/Classes/eppz!kit.js" />
       </list>
     </option>
   </component>
@@ -150,10 +216,6 @@
               <option name="myItemId" value="Classes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -173,6 +235,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eppz!js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eppz!js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eppz!kit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -182,8 +262,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -216,6 +296,12 @@
         </serverdata>
       </server>
     </servers>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Classes" />
+      <recent name="$PROJECT_DIR$/Classes/eppz!kit" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -264,7 +350,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17149758" sideWeight="0.67106503" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17330918" sideWeight="0.67106503" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -346,11 +432,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Classes/Tools/Class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Testbed/Inheritance.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="0" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.0" />
@@ -386,42 +467,59 @@
         <state line="53" column="27" selection-start="2079" selection-end="2079" vertical-scroll-proportion="0.38314945" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Testbed/SuperclassValues.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="9" selection-start="1886" selection-end="1886" vertical-scroll-proportion="0.7221665" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Tools/Class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="187" column="64" selection-start="7143" selection-end="7143" vertical-scroll-proportion="0.4884654" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Testbed/ClassMethods.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="64" column="27" selection-start="2417" selection-end="2417" vertical-scroll-proportion="0.96288866" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Tools/helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="22" selection-start="2549" selection-end="2549" vertical-scroll-proportion="0.13540623" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Tools/eppz!kit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="373" selection-end="373" vertical-scroll-proportion="0.23762377" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="35" selection-start="276" selection-end="276" vertical-scroll-proportion="0.18255578" />
+        <state line="5" column="51" selection-start="97" selection-end="97" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/eppz!kit/Element.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="0" selection-start="4056" selection-end="4056" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/eppz!kit/Class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="3" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/eppz!kit/Array.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Testbed/SuperclassValues.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="9" selection-start="1886" selection-end="1886" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="1" selection-start="3764" selection-end="3764" vertical-scroll-proportion="-20.0">
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/eppz!kit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="171" selection-start="2748" selection-end="2748" vertical-scroll-proportion="0.52061856">
+        <state line="14" column="19" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.14242728">
           <folding />
         </state>
       </provider>

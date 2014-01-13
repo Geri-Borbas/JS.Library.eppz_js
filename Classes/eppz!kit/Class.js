@@ -212,6 +212,12 @@ function copyPropertiesOfObjectTo(from, to)
     }
 }
 
+
+/**
+ * Not untilized yet.
+ * Can be used in looking up class name in variable it is gonna be assigned to.
+ */
+
 function objectToString(object)
 {
     // Checks.

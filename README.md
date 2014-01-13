@@ -5,7 +5,7 @@ eppz!js
 
 Inheritance (of course)? Missing class methods? Want to make reliable `super` calls? Even in class methods? See class type in inspector? Correct results for `constructor.name`? Property definitions outside constructor? I do.
 
-Like/use objective programming? You'll like this. **A single file called [`Class.js`](https://github.com/eppz/eppz-js/blob/master/Classes/Tools/Class.js)** is what you're looking for.
+Like/use objective programming? You'll like this. **A single file called [`Class.js`](https://github.com/eppz/eppz-js/blob/master/Classes/eppz!kit/Class.js)** is what you're looking for.
 
 
 # Usage
@@ -118,7 +118,12 @@ console.log(widget.getColorDescription()); // As you would expect. My color is B
 ```
 There are class implementations out there that would output `Default` as color here. Actually the main reason I made this `Class` implementation was to get over this issue.
 
-This method works over **any amount of cascading super calls**, as super references are bound right to the functions instead of the calling instance. Passing over the calling instance is done by a proxy object that wraps every superclass method into a function that does the job. See the [implementation](https://github.com/eppz/eppz-js/blob/master/Classes/Tools/Class.js) for further details if interested at all.
+This method works over **any amount of cascading super calls**, as super references are bound right to the functions instead of the calling instance. Passing over the calling instance is done by a proxy object that wraps every superclass method into a function that does the job. See the [implementation](https://github.com/eppz/eppz-js/blob/master/Classes/eppz!kit/Class.js) for further details if interested at all.
+
+
+## `eppz!kit.js`
+
+Beside this `Class` implementation this repository collects some tools for everyday JavaScript development, mainly for personal use for now, not meant for production.
 
 
 ## Version tracking
@@ -137,6 +142,11 @@ This method works over **any amount of cascading super calls**, as super referen
     + Automatic getter setter generation
     + Automatic enumerators for collections (!)
 
+> #### 0.1.2
+>
+> + File regouping
+>
+>
 > #### 0.1.1
 > 
 > + Stable
