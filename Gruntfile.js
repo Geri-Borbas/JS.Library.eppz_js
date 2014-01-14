@@ -6,25 +6,63 @@ module.exports = function(grunt)
         // Import package information.
         package: grunt.file.readJSON('package.json'),
 
-        // Minify.
-        uglify: {
-            options:
+        // Builds.
+        uglify:
+        {
+
+            /**
+             * eppz!js with all the goodies.
+             */
+            eppz_js :
             {
-                banner: '/* <%= package.name %> <%= package.version %> */\n'
+                options:
+                { banner: '/* <%= package.name %> <%= package.version %> */\n' },
+
+                files :
+                {
+                    'Build/<%= package.name %>_<%= package.version %>.min.js' :
+                        [
+                            'Classes/eppz!kit/*.js',
+                            'Classes/eppz!kit.js',
+                        ]
+                },
             },
-            build: {
-                src: [
-                    'Classes/eppz!kit/*.js',
-                    'Classes/eppz!kit.js',
-                    ],
-                dest: '_build/<%= package.name %>_<%= package.version %>.min.js'
+
+            /**
+             * eppz!js Objective-JavaScript class implementation.
+             */
+            eppz_js_class :
+            {
+                options:
+                { banner: '/* <%= package.name %>!class <%= package.version %> */\n' },
+
+                files :
+                {
+                    'Build/<%= package.name %>!class.min.js' : [ 'Classes/eppz!kit/Class.js' ]
+                },
+            },
+
+            /**
+             * Testbed for eppz!js features.
+             */
+            testbed :
+            {
+                options:
+                {
+                    compress: false,
+                    mangle: false
+                },
+
+                files :
+                { '<%= package.name %>.testbed.js' : 'Classes/Testbed/*.js' }
             }
+
         },
 
         // Watch.
         watch:
         {
-            files: ['Classes/**/*'],
+            files: ['Classes/**'],
             tasks: ['uglify']
         }
 

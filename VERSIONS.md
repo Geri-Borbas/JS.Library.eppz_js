@@ -12,6 +12,12 @@
     + Automatic getter setter generation
     + Automatic enumerators for collections (!)
 
+
+#### 0.1.4
+
++ Setup grunt build targets
+
+
 #### 0.1.3
 
 + Added grunt

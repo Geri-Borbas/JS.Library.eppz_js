@@ -5,11 +5,10 @@ eppz!js
 
 Inheritance (of course)? Missing class methods? Want to make reliable `super` calls? Even in class methods? See class type in inspector? Correct results for `constructor.name`? Property definitions outside constructor? I do.
 
-Like/use objective programming? You'll like this. **A single file called [`Class.js`](https://github.com/eppz/eppz-js/blob/master/Classes/eppz!kit/Class.js)** is what you're looking for.
+Like/use objective programming? You'll like this. **A single file called [`eppz!js!class.min.js`](https://github.com/eppz/eppz-js/blob/master/build/eppz!js!class.min.js)** is what you're looking for.
 
 
 # Usage
-
 
 **Creating classes**, and instances are pretty straightforward.
 ```JavaScript
@@ -36,7 +35,6 @@ var widget = new View('widget_1');
 console.log(widget.id); // widget_1
 ```
 
-
 **Extend classes** as well.
 ```JavaScript
 // An imaginary Widget class, subclass of View.
@@ -53,7 +51,6 @@ var widget = new Widget(1);
 console.log(widget.id); // widget_1
 ```
 
-
 Better using **superclass implementation** for maintainability, safety and peace.
 ```JavaScript
 // With super calls.
@@ -68,7 +65,6 @@ var Widget = View.extend
 var widget = new Widget(1);
 console.log(widget.id); // widget_1
 ```
-
 
 Or using **class methods** for factories and more.
 ```JavaScript
@@ -87,7 +83,6 @@ var Widget = View.extend
 var widget = Widget.widgetWithNumber(1);
 console.log(widget.id); // widget_1
 ```
-
 
 ## `super` calls
 

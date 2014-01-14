@@ -64,11 +64,3 @@ function log(message)
 
 function include(filePath)
 { EPPZ.include(filePath); }
-
-
-/**
- * Include
- */
-
-EPPZ.includeBasePath = 'Classes/eppz!kit';
-include('Class.js');

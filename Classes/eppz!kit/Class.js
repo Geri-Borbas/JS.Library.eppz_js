@@ -31,6 +31,7 @@ Class.className = 'Class';
  *
  */
 
+
 Class.extend = function(instanceMethods, classMethods)
 {
     /**
@@ -211,52 +212,3 @@ function copyPropertiesOfObjectTo(from, to)
         to[eachPropertyName] = eachProperty;
     }
 }
-
-
-/**
- * Not untilized yet.
- * Can be used in looking up class name in variable it is gonna be assigned to.
- */
-
-function objectToString(object)
-{
-    // Checks.
-    if (object == null) return;
-
-    var string = '';
-
-    // Object
-    if (typeof(object) == "object" && (object.join == undefined))
-    {
-        string += '{';
-            for (eachPropertyName in object)
-            { string += eachPropertyName+': '+objectToString(object[eachPropertyName])+', '; };
-        string += '}';
-    }
-
-    // Array
-    else if (typeof(object) == "object" && !(object.join == undefined))
-    {
-        string += '[';
-            for(eachPropertyName in object)
-            { string += objectToString(object[eachPropertyName])+", "; }
-        string += ']';
-    }
-
-    // Function
-    else if (typeof(object) == "function")
-    {
-        string += object.toString();
-    }
-
-    // Anything else
-    else
-    {
-        string += JSON.stringify(object);
-    }
-
-    return string;
-}
-
-function stripAlmostEverything(string)
-{ return string.replace(/[^a-zA-Z0-9_$=]/g,''); }
