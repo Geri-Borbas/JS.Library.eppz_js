@@ -6,7 +6,20 @@ module.exports = function(grunt)
         // Import package information.
         package: grunt.file.readJSON('package.json'),
 
-        // Builds.
+        // Merge includes to 'build/temp'.
+        includes:
+        {
+            options:
+            { includeRegexp: /^(\s*)import\s+['"](\S+)['"]\s*$/, },
+
+            files:
+            {
+                src: ['Classes/**'],
+                dest: 'build/temp',
+            }
+        },
+
+        // Minifiy 'build/temp' results.
         uglify:
         {
 
@@ -20,10 +33,10 @@ module.exports = function(grunt)
 
                 files :
                 {
-                    'Build/<%= package.name %>_<%= package.version %>.min.js' :
+                    'build/<%= package.name %>_<%= package.version %>.min.js' :
                         [
-                            'Classes/eppz!kit/*.js',
-                            'Classes/eppz!kit.js',
+                            'build/temp/Classes/eppz!kit/*.js',
+                            'build/temp/Classes/eppz!kit.js',
                         ]
                 },
             },
@@ -38,24 +51,9 @@ module.exports = function(grunt)
 
                 files :
                 {
-                    'Build/<%= package.name %>!class.min.js' : [ 'Classes/eppz!kit/Class.js' ]
+                    'build/<%= package.name %>!class.min.js' : [ 'build/temp/Classes/eppz!kit/Class.js' ]
                 },
             },
-
-            /**
-             * Testbed for eppz!js features.
-             */
-            testbed :
-            {
-                options:
-                {
-                    compress: false,
-                    mangle: false
-                },
-
-                files :
-                { '<%= package.name %>.testbed.js' : 'Classes/Testbed/*.js' }
-            }
 
         },
 
@@ -63,12 +61,13 @@ module.exports = function(grunt)
         watch:
         {
             files: ['Classes/**'],
-            tasks: ['uglify']
+            tasks: ['includes', 'uglify']
         }
 
     });
 
     // Load plugins.
+    grunt.loadNpmTasks('grunt-includes');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 

@@ -16,6 +16,7 @@
 #### 0.1.4
 
 + Setup grunt build targets
++ Added grunt-include
 
 
 #### 0.1.3

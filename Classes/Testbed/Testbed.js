@@ -1,6 +1,6 @@
 /**
  *
- * Created by Borbás Geri on 7/6/13
+ * Created by Borbás Geri on 1/14/14
  * Copyright (c) 2013 eppz! development, LLC.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -9,43 +9,7 @@
  *
  */
 
-
-/**
- * Objective-JavaScript.
- */
-import 'eppz!kit/Class.js'
-
-
-var EPPZ =
-{
-    /**
-     * Logging.
-     */
-
-    debugging: true,
-
-    log: function(message)
-    { if (this.debugging) console.log(message); },
-
-
-    /**
-     * A simple for loop wrapped up.
-     *
-     * @param until Loop this times
-     * @param callback With signature function(index)
-     */
-    loopUntil: function(until, callback)
-    {
-        for (var i = 0; i < until; i++)
-        { callback(i); }
-    },
-
-};
-
-
-/**
- * Aliases
- */
-
-function log(message)
-{ EPPZ.log(message); }
+import 'Tests/Inheritance.js'
+import 'Tests/ClassMethods.js'
+import 'Tests/Superclass.js'
+import 'Tests/SuperclassValues.js'

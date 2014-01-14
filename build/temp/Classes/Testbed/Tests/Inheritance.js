@@ -1,6 +1,6 @@
 /**
  *
- * Created by Borbás Geri on 7/6/13
+ * Created by Borbás Geri on 1/8/14
  * Copyright (c) 2013 eppz! development, LLC.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -10,42 +10,46 @@
  */
 
 
-/**
- * Objective-JavaScript.
- */
-import 'eppz!kit/Class.js'
+log('____________________________');
+log('eppz!js Class // inheritance');
+log('____________________________');
 
 
-var EPPZ =
+(function()
 {
-    /**
-     * Logging.
-     */
+    var A = Class.extend
+    ({
+        className: 'A',
+        aCanDo: function()
+        { log(this.className+' can do here.'); },
+    });
 
-    debugging: true,
+    var B = A.extend
+    ({
+        className: 'B',
+        bCanDo: function()
+        { log(this.className+' can do there.'); },
+    });
 
-    log: function(message)
-    { if (this.debugging) console.log(message); },
+    var C = B.extend
+    ({
+        className: 'C',
+        cCanDo: function()
+        { log(this.className+' can do anywhere.'); },
 
-
-    /**
-     * A simple for loop wrapped up.
-     *
-     * @param until Loop this times
-     * @param callback With signature function(index)
-     */
-    loopUntil: function(until, callback)
-    {
-        for (var i = 0; i < until; i++)
-        { callback(i); }
-    },
-
-};
+    });
 
 
-/**
- * Aliases
- */
+    var a = new A();
+        a.aCanDo();
 
-function log(message)
-{ EPPZ.log(message); }
+    var b = new B();
+        b.aCanDo();
+        b.bCanDo();
+
+    var c = new C();
+        c.aCanDo();
+        c.bCanDo();
+        c.cCanDo();
+})();
+
