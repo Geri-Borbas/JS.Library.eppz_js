@@ -5,12 +5,17 @@
     + Create name property for classes
     + Same for `super` proxy object
 
-+ Create user friendly test cases
-    + Lovely ascii art for SuperclassValues
-
 + Class goodies
     + Automatic getter setter generation
     + Automatic enumerators for collections (!)
+
++ Tests
+    + Mocha / Karma, Travis CI
+
+
+#### 0.1.5
+
++ Arranged eppz!js features
 
 
 #### 0.1.4

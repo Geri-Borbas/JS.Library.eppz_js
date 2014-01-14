@@ -10,11 +10,29 @@
  */
 
 
+/**
+ * Checks is the given array contains the given value.
+ *
+ * @param array Array to check (haystack).
+ * @param value Value to check (needle).
+ * @returns {boolean}
+ */
 function arrayHasValue(array, value)
 { return array.indexOf(value) != -1; }
 
+
 /**
- * Removes every occurance of a single value from an array.
+ * Return with the copy of the given array.
+ *
+ * @param array To be copied.
+ * @returns {array}
+ */
+function cloneArray(array)
+{ return array.slice(0); }
+
+
+/**
+ * Removes every occurrence of a single value from an array.
  *
  * @param value Value to be removed.
  * @param array Target array to operate on.
@@ -31,13 +49,14 @@ function removeValueFromArray(value, array)
     }
 }
 
+
 /**
  * Returns with the union of the given arrays.
  *
- * @param Any amount of arrays to be united.
+ * @param array,... Any amount of arrays to be united.
  * @returns {array} The union array.
  */
-function uniteArrays()
+function uniteArrays(array)
 {
     var union = [];
     for (var argumentIndex = 0; argumentIndex < arguments.length; argumentIndex++)
@@ -58,6 +77,14 @@ function uniteArrays()
     return union;
 }
 
+
+/**
+ * Returns with the subtraction of the given arrays.
+ *
+ * @param one Array to subtract from.
+ * @param other Array containing elements to subtract.
+ * @returns {array} The subtraction of the arrays.
+ */
 function subtractArrays(one, other)
 {
     var subtraction = [];

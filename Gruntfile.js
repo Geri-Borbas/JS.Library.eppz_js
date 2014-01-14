@@ -34,10 +34,7 @@ module.exports = function(grunt)
                 files :
                 {
                     'build/<%= package.name %>_<%= package.version %>.min.js' :
-                        [
-                            'build/temp/Classes/eppz!kit/*.js',
-                            'build/temp/Classes/eppz!kit.js',
-                        ]
+                        [ 'build/temp/Classes/eppz!js.js' ]
                 },
             },
 
@@ -51,7 +48,7 @@ module.exports = function(grunt)
 
                 files :
                 {
-                    'build/<%= package.name %>!class.min.js' : [ 'build/temp/Classes/eppz!kit/Class.js' ]
+                    'build/<%= package.name %>!class.min.js' : [ 'build/temp/Classes/eppz!js/Class.js' ]
                 },
             },
 

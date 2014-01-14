@@ -116,9 +116,9 @@ There are class implementations out there that would output `Default` as color h
 This method works over **any amount of cascading super calls**, as super references are bound right to the functions instead of the calling instance. Passing over the calling instance is done by a proxy object that wraps every superclass method into a function that does the job. See the [implementation](https://github.com/eppz/eppz-js/blob/master/Classes/eppz!kit/Class.js) for further details if interested at all.
 
 
-## `eppz!kit.js`
+## `eppz!js`
 
-Beside this `Class` implementation this repository collects some tools for everyday JavaScript development, mainly for personal use for now, not meant for production.
+Beside this `Class` implementation this repository collects some tools for everyday JavaScript development, mainly for personal use. Can take a look at some [`Array`](https://github.com/eppz/eppz-js/blob/master/Classes/eppz!js/Array.js) and [`Element`](https://github.com/eppz/eppz-js/blob/master/Classes/eppz!js/Element.js) tools, though.
 
 
 #### License

@@ -11,41 +11,21 @@
 
 
 /**
- * Objective-JavaScript.
+ * Basic helper features.
  */
-import 'eppz!kit/Class.js'
-
-
-var EPPZ =
-{
-    /**
-     * Logging.
-     */
-
-    debugging: true,
-
-    log: function(message)
-    { if (this.debugging) console.log(message); },
-
-
-    /**
-     * A simple for loop wrapped up.
-     *
-     * @param until Loop this times
-     * @param callback With signature function(index)
-     */
-    loopUntil: function(until, callback)
-    {
-        for (var i = 0; i < until; i++)
-        { callback(i); }
-    },
-
-};
-
+import 'eppz!js/Helpers.js'
 
 /**
- * Aliases
+ * Objective-JavaScript.
  */
+import 'eppz!js/Class.js'
 
-function log(message)
-{ EPPZ.log(message); }
+/**
+ * Array helpers.
+ */
+import 'eppz!js/Array.js'
+
+/**
+ * Element helpers.
+ */
+import 'eppz!js/Element.js'

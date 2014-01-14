@@ -9,8 +9,39 @@
  *
  */
 
-import 'Tests/Inheritance.js'
-import 'Tests/ClassMethods.js'
-import 'Tests/Superclass.js'
-import 'Tests/SuperclassValues.js'
-import 'Tests/Element.js'
+
+var EPPZ =
+{
+    /**
+     * Properties.
+     */
+
+    debugging: true,
+    classNameSplitter: /[ ]+/,
+    classNameJoiner: ' ',
+
+    log: function(message)
+    { if (this.debugging) console.log(message); },
+
+
+    /**
+     * A simple for loop wrapped up.
+     *
+     * @param until Loop this times
+     * @param callback With signature function(index)
+     */
+    loopUntil: function(until, callback)
+    {
+        for (var i = 0; i < until; i++)
+        { callback(i); }
+    },
+
+};
+
+
+/**
+ * Aliases
+ */
+
+function log(message)
+{ EPPZ.log(message); }
