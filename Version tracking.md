@@ -13,6 +13,14 @@
     + Mocha / Karma, Travis CI
 
 
+#### 0.1.6
+
++ Changed 'include' syntax
+    + 'import "whatever.js"' changed to 'include("whatever.js");'
+    + also implemented a function that injects script to fallback, IDE consistency
++ Removed version number from distribution build file name
+
+
 #### 0.1.5
 
 + Arranged eppz!js features

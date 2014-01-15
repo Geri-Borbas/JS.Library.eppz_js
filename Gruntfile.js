@@ -10,7 +10,7 @@ module.exports = function(grunt)
         includes:
         {
             options:
-            { includeRegexp: /^(\s*)import\s+['"](\S+)['"]\s*$/, },
+            { includeRegexp: /(\s*)include\s*[(]\s*['"](\S+)['"]\s*[)]\s*;?\s*$/, },
 
             files:
             {
@@ -33,7 +33,7 @@ module.exports = function(grunt)
 
                 files :
                 {
-                    'build/<%= package.name %>_<%= package.version %>.min.js' :
+                    'build/<%= package.name %>.min.js' :
                         [ 'build/temp/Classes/eppz!js.js' ]
                 },
             },

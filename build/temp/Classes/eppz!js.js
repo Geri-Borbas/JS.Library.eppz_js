@@ -61,6 +61,20 @@ var EPPZ =
 function log(message)
 { EPPZ.log(message); }
 
+
+/**
+ * Only for IDE consistency.
+ * Grunt 'include' will replace the statements with the referenced source code.
+ */
+function include(javaScriptFilePath)
+{
+    var script = document.createElement('script');
+    script.src = javaScriptFilePath;
+
+    var head = document.getElementsByTagName('head')[0];
+    head.appendChild(script);
+}
+
 /**
  * Objective-JavaScript.
  */

@@ -9,8 +9,9 @@
  *
  */
 
-import 'Tests/Inheritance.js'
-import 'Tests/ClassMethods.js'
-import 'Tests/Superclass.js'
-import 'Tests/SuperclassValues.js'
-import 'Tests/Element.js'
+
+include('Tests/Inheritance.js');
+include('Tests/ClassMethods.js');
+include('Tests/Superclass.js');
+include('Tests/SuperclassValues.js');
+include('Tests/Element.js');

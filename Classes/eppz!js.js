@@ -13,19 +13,19 @@
 /**
  * Basic helper features.
  */
-import 'eppz!js/Helpers.js'
+include('eppz!js/Helpers.js');
 
 /**
  * Objective-JavaScript.
  */
-import 'eppz!js/Class.js'
+include('eppz!js/Class.js');
 
 /**
  * Array helpers.
  */
-import 'eppz!js/Array.js'
+include('eppz!js/Array.js');
 
 /**
  * Element helpers.
  */
-import 'eppz!js/Element.js'
+include('eppz!js/Element.js');
