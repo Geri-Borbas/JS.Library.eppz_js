@@ -56,7 +56,6 @@ log('_________________________________');
         },
     });
 
-
     var first = new First();
     var second = new Second();
     var third = new Third();
@@ -66,9 +65,6 @@ log('_________________________________');
     second.stuff('it');
     third.stuff('it');
     fourth.stuff('it');
-
-    var check = first instanceof First;
-    log('Eko '+check);
 
     /*
 

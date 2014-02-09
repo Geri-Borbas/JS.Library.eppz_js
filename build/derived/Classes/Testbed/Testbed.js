@@ -378,7 +378,6 @@ log('_________________________________');
         },
     });
 
-
     var first = new First();
     var second = new Second();
     var third = new Third();
@@ -388,9 +387,6 @@ log('_________________________________');
     second.stuff('it');
     third.stuff('it');
     fourth.stuff('it');
-
-    var check = first instanceof First;
-    log('Eko '+check);
 
     /*
 
@@ -528,7 +524,6 @@ log('__________________________________');
         className: 'Manager',
 
         collection: [],
-        enumerateCollection: function(callback){}, // This is optional. May define as placeholder to let IDE autocomplete for you.
 
         logCollection: function()
         {
@@ -593,6 +588,9 @@ log('__________________________________');
 
 
     var controller = new Controller();
+    log('controller.div.style.width is `'+controller.div.style.width+'`.');
+
+    controller.width = 40;
     log('controller.div.style.width is `'+controller.div.style.width+'`.');
 
 })();

@@ -45,5 +45,8 @@ log('__________________________________');
     var controller = new Controller();
     log('controller.div.style.width is `'+controller.div.style.width+'`.');
 
+    controller.width = 40;
+    log('controller.div.style.width is `'+controller.div.style.width+'`.');
+
 })();
 

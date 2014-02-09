@@ -11,24 +11,28 @@
 
 
 /**
+ * Objective-JavaScript.
+ */
+include('eppz!js/Class.js');
+
+
+/**
  * Basic helper features.
  */
 include('eppz!js/Helpers.js');
 
-/**
- * Objective-JavaScript.
- */
-include('eppz!js/Class.js');
 
 /**
  * String helpers.
  */
 include('eppz!js/String.js');
 
+
 /**
  * Array helpers.
  */
 include('eppz!js/Array.js');
+
 
 /**
  * Element helpers.

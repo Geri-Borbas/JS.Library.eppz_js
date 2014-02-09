@@ -3,9 +3,15 @@
 + Mocha client side tests
 
 
+#### 0.2.2
+
++ Gentle fixes
+
+
 #### 0.2.1
 
-+ Class features now dependent on `Object.js` and `KeyPaths.js`
++ `Class.js` features now dependent on `Object.js` and `KeyPaths.js`
+    + Library climbed up to 4,523 Bytes
 
 
 #### 0.2.0

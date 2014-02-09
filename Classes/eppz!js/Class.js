@@ -107,11 +107,11 @@ Class.extend = function(instanceMethods, classMethods, propertyBindings)
             // Call construct only if 'new' was called outside this function.
             if(arguments[0] == "skip") return;
 
-            // Sythesize enumerators.
-            ClassTools.synthesizeEnumeratorsForObject(this);
-
             // Equip constants.
             ClassTools.copyPropertiesOfObjectTo(instanceMethods, this);
+
+            // Sythesize enumerators.
+            ClassTools.synthesizeEnumeratorsForObject(this);
 
             // Synthesize property bindings.
             if (propertyBindings != null)
@@ -312,9 +312,6 @@ var ClassTools =
      */
     synthesizeAccessorsWithPropertyBindingsMapForObject: function(object, instanceMethods, propertyMap)
     {
-        log(object);
-        log(instanceMethods);
-
         for (var eachPropertyName in instanceMethods)
         {
             var eachProperty = instanceMethods[eachPropertyName];

@@ -9,6 +9,7 @@ eppz!js
 > ##### [Inheritance](#_inheritance)
 > ##### [Class methods](#_class_methods)
 > ##### [KeyPaths](#_keypaths)
+> ##### [Instance type](#_instance_type)
 
 
 <a name="_inheritance"></a>
@@ -127,22 +128,23 @@ This method works over **any amount of cascading super calls**, as super referen
 
 As soon as you define an `Array` property, enumerators will be synthesized for you upon instance construction.
 ```JavaScript
-var Manager = Class.extend
+var Alphabet = Class.extend
 ({
-    collection: [],
-    logCollection: function()
+    letters: [],
+    logLetters: function()
     {
-        this.enumerateCollection(function(eachCollection, eachIndex) // Created automagically.
-        {
-            log(eachIndex+': '+eachCollection);
-        });
-
+        this.enumerateLetters(function(eachLetter, eachIndex) // Created automagically.
+        { console.log(eachIndex+': '+eachLetter); });
     }
 });
 
-var manager = new Manager();
-manager.collection = [1,2,3,4,5,6,7,8,9];
-manager.logCollection();
+var alphabet = new Alphabet();
+alphabet.letters = ['A','B','C','D'];
+alphabet.logLetters();
+// 0: A
+// 1: B
+// 2: C
+// 3: D
 ```
 
 <a name="_bindings"></a>
@@ -168,10 +170,10 @@ var Controller = Class.extend
 );
 
 var controller = new Controller();
-log(controller.div.style.width); // 20px
+console.log(controller.div.style.width); // 20px
 
 controller.width = 40;
-log(controller.div.style.width); // 40px
+console.log(controller.div.style.width); // 40px
 ```
 
 
@@ -181,7 +183,23 @@ log(controller.div.style.width); // 40px
 As a side effect, every object is equiped with keypath tools.
 ```JavaScript
 controller.setValueForKeyPath('20px', 'div.style.width');
-log(controller.getValueForKeyPath('div.style.width')); // 20px
+console.log(controller.getValueForKeyPath('div.style.width')); // 20px
+```
+
+
+<a name="_instance_type"></a>
+## Instance type
+
+If you define a `className` property, runtime instance will be named after. Easier debug, also you can use `instanceof` inspections.
+```JavaScript
+var Widget = Class.extend
+({
+    className: 'Widget',
+});
+
+var widget = new Widget();
+var test = (widget instanceof Widget);
+console.log(test); // true
 ```
 
 
