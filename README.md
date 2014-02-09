@@ -5,12 +5,12 @@ eppz!js
 
 Easy inheritance, readable implementations, class methods (!), reliable `super` calls, minimalistic but readable API. Perfect base for a clean / extendable design.
 
-### [Superclass calls](#super)
-#### [Automatic enumerators](#enumerators) for `Array` properties
-#### [Property bindings](#bindings)
-##### [Inheritance](#inheritance)
-##### [Class methods](#class_methods)
-##### [KeyPaths](#keypaths)
+> ### [Superclass calls](#super)
+> #### [Enumerators](#enumerators)
+> #### [Property bindings](#bindings)
+> ##### [Inheritance](#inheritance)
+> ##### [Class methods](#class_methods)
+> ##### [KeyPaths](#keypaths)
 
 Like/use objective programming? You'll like this. **A single file called [`eppz!js!class.min.js`](https://github.com/eppz/eppz-js/blob/master/build/eppz!js!class.min.js)** is what you're looking for.
 

@@ -7,7 +7,7 @@
     <ignored path="eppz!kit.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Class.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391973008429" ignored="false" />
-    <file path="/README.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391975101535" ignored="false" />
+    <file path="/README.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391975171545" ignored="false" />
     <file path="/Inheritance.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389491542629" ignored="false" />
     <file path="/index.html" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391910406069" ignored="false" />
     <file path="/Super.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389232132897" ignored="false" />
@@ -92,7 +92,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="3" selection-start="229" selection-end="229" vertical-scroll-proportion="0.10189076">
+            <state line="12" column="2" selection-start="410" selection-end="410" vertical-scroll-proportion="0.18067227">
               <folding />
             </state>
           </provider>
@@ -640,7 +640,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="3" selection-start="229" selection-end="229" vertical-scroll-proportion="0.10189076">
+        <state line="12" column="2" selection-start="410" selection-end="410" vertical-scroll-proportion="0.18067227">
           <folding />
         </state>
       </provider>
