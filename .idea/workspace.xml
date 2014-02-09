@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="634ad747-0992-43fe-a8a9-befdcf12abff" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/eppz!js/Class.js" afterPath="$PROJECT_DIR$/Classes/eppz!js/Class.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/derived/Classes/eppz!js/Class.js" afterPath="$PROJECT_DIR$/build/derived/Classes/eppz!js/Class.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Version tracking.md" afterPath="$PROJECT_DIR$/Version tracking.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/eppz!js!class.min.js" afterPath="$PROJECT_DIR$/build/eppz!js!class.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/eppz!js.js" afterPath="$PROJECT_DIR$/Classes/eppz!js.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/derived/Classes/eppz!js.js" afterPath="$PROJECT_DIR$/build/derived/Classes/eppz!js.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/eppz!js.min.js" afterPath="$PROJECT_DIR$/build/eppz!js.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/0.1.6/eppz!js_0.1.6.min.js" afterPath="$PROJECT_DIR$/build/0.1.6/eppz!js_0.1.6.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="eppz!kit.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Class.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391973008429" ignored="false" />
-    <file path="/README.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391974207066" ignored="false" />
+    <file path="/README.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391975101535" ignored="false" />
     <file path="/Inheritance.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389491542629" ignored="false" />
     <file path="/index.html" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391910406069" ignored="false" />
     <file path="/Super.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389232132897" ignored="false" />
@@ -101,7 +92,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="3" selection-start="453" selection-end="453" vertical-scroll-proportion="0.15756303">
+            <state line="7" column="3" selection-start="229" selection-end="229" vertical-scroll-proportion="0.10189076">
               <folding />
             </state>
           </provider>
@@ -649,7 +640,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="3" selection-start="453" selection-end="453" vertical-scroll-proportion="0.15756303">
+        <state line="7" column="3" selection-start="229" selection-end="229" vertical-scroll-proportion="0.10189076">
           <folding />
         </state>
       </provider>

@@ -5,15 +5,14 @@ eppz!js
 
 Easy inheritance, readable implementations, class methods (!), reliable `super` calls, minimalistic but readable API. Perfect base for a clean / extendable design.
 
-Like/use objective programming? You'll like this. **A single file called [`eppz!js!class.min.js`](https://github.com/eppz/eppz-js/blob/master/build/eppz!js!class.min.js)** is what you're looking for.
+### [Superclass calls](#super)
+#### [Automatic enumerators](#enumerators) for `Array` properties
+#### [Property bindings](#bindings)
+##### [Inheritance](#inheritance)
+##### [Class methods](#class_methods)
+##### [KeyPaths](#keypaths)
 
-* Awesome feature pool
----
-    + [Automatic enumerators](#enumerators) for `Array` properties
-    + [Property bindings](#bindings)
-    + [Superclass calls](#super)
-    + [Inheritance](#inheritance)
-    + [Class methods](#class_methods)
+Like/use objective programming? You'll like this. **A single file called [`eppz!js!class.min.js`](https://github.com/eppz/eppz-js/blob/master/build/eppz!js!class.min.js)** is what you're looking for.
 
 
 <a name="inheritance"></a>
@@ -174,6 +173,19 @@ var Controller = Class.extend
 
 var controller = new Controller();
 log(controller.div.style.width); // 20px
+
+controller.width = 40;
+log(controller.div.style.width); // 40px
+```
+
+
+<a name="keypaths"></a>
+## KeyPaths
+
+As a side effect, every object is equiped with keypath tools.
+```JavaScript
+controller.setValueForKeyPath('20px', 'div.style.width');
+log(controller.getValueForKeyPath('div.style.width')); // 20px
 ```
 
 
