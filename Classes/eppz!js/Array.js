@@ -10,44 +10,74 @@
  */
 
 
+Array.prototype.addMethods
+({
+
+
+    /**
+     * Checks if the current array contains the given value.
+     *
+     * @param value Value to check (needle).
+     * @returns {boolean}
+     */
+    hasValue: function(value)
+    { return this.indexOf(value) != -1; },
+
+
+    /**
+     * Return with the copy of the current array.
+     *
+     * @returns {array}
+     */
+    clone: function()
+    { return this.slice(0); },
+
+
+    /**
+     * Removes every occurrence of a single value.
+     *
+     * @param value Value to be removed.
+     */
+    removeValue: function(value)
+    {
+        for (var index = 0; index < this.length; index++)
+        {
+            if (this[index] === value)
+            {
+                this.splice(index, 1);
+                index--;
+            }
+        }
+    },
+
+    /**
+     * Enumerate elements within.
+     *
+     * @param callback A callback function with the signature `function(eachValue, eachKey)`.
+     */
+    enumerate: function(callback)
+    {
+        for (eachKey in this)
+        {
+            eachValue = this[eachKey];
+            callback(eachValue, eachKey);
+        }
+    },
+
+
+});
+
+
 /**
- * Checks is the given array contains the given value.
+ * Checks if the object is an Array.
  *
- * @param array Array to check (haystack).
- * @param value Value to check (needle).
  * @returns {boolean}
  */
-function arrayHasValue(array, value)
-{ return array.indexOf(value) != -1; }
-
-
-/**
- * Return with the copy of the given array.
- *
- * @param array To be copied.
- * @returns {array}
- */
-function cloneArray(array)
-{ return array.slice(0); }
-
-
-/**
- * Removes every occurrence of a single value from an array.
- *
- * @param value Value to be removed.
- * @param array Target array to operate on.
- */
-function removeValueFromArray(value, array)
+if (typeof Array.isArray === 'undefined')
 {
-    for (var index = 0; index < this.length; index++)
-    {
-        if (array[index] === value)
-        {
-            array.splice(index, 1);
-            index--;
-        }
-    }
-}
+    Array.isArray = function(object)
+    { return Object.toString.call(object) === '[object Array]'; }
+};
 
 
 /**

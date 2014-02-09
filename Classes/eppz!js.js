@@ -16,9 +16,15 @@
 include('eppz!js/Helpers.js');
 
 /**
- * Objective-JavaScript.
+ * Object helpers.
  */
-include('eppz!js/Class.js');
+include('eppz!js/Object.js');
+include('eppz!js/KeyPaths.js');
+
+/**
+ * String helpers.
+ */
+include('eppz!js/String.js');
 
 /**
  * Array helpers.
@@ -29,3 +35,8 @@ include('eppz!js/Array.js');
  * Element helpers.
  */
 include('eppz!js/Element.js');
+
+/**
+ * Objective-JavaScript.
+ */
+include('eppz!js/Class.js');

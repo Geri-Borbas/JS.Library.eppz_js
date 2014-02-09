@@ -6,7 +6,7 @@ module.exports = function(grunt)
         // Import package information.
         package: grunt.file.readJSON('package.json'),
 
-        // Merge includes to 'build/temp'.
+        // Merge includes to 'build/derived'.
         includes:
         {
             options:
@@ -14,12 +14,12 @@ module.exports = function(grunt)
 
             files:
             {
-                src: ['Classes/**'],
-                dest: 'build/temp',
+                src: ['Classes/**', 'Tests/**'],
+                dest: 'build/derived',
             }
         },
 
-        // Minifiy 'build/temp' results.
+        // Minifiy 'build/derived' results.
         uglify:
         {
 
@@ -34,7 +34,10 @@ module.exports = function(grunt)
                 files :
                 {
                     'build/<%= package.name %>.min.js' :
-                        [ 'build/temp/Classes/eppz!js.js' ]
+                        [ 'build/derived/Classes/<%= package.name %>.js' ],
+
+                    'build/<%= package.version %>/<%= package.name %>_<%= package.version %>.min.js' :
+                        [ 'build/derived/Classes/<%= package.name %>.js' ],
                 },
             },
 
@@ -48,7 +51,7 @@ module.exports = function(grunt)
 
                 files :
                 {
-                    'build/<%= package.name %>!class.min.js' : [ 'build/temp/Classes/eppz!js/Class.js' ]
+                    'build/<%= package.name %>!class.min.js' : [ 'build/derived/Classes/eppz!js/Class.js' ]
                 },
             },
 
@@ -57,8 +60,8 @@ module.exports = function(grunt)
         // Watch.
         watch:
         {
-            files: ['Classes/**'],
-            tasks: ['includes', 'uglify']
+            files: ['Classes/**', 'Tests/**'],
+            tasks: ['includes', 'uglify'],
         }
 
     });

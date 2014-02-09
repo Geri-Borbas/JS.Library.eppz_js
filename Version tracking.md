@@ -13,6 +13,12 @@
     + Mocha / Karma, Travis CI
 
 
+#### 0.1.7
+
++ Renamed `temp` to `derived`
++ Added object method equipper `addMethods`
+
+
 #### 0.1.6
 
 + Changed 'include' syntax
