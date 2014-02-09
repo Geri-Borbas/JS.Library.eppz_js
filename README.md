@@ -8,6 +8,7 @@ Easy inheritance, readable implementations, class methods (!), reliable `super` 
 Like/use objective programming? You'll like this. **A single file called [`eppz!js!class.min.js`](https://github.com/eppz/eppz-js/blob/master/build/eppz!js!class.min.js)** is what you're looking for.
 
 * Awesome feature pool
+---
     + [Automatic enumerators](#enumerators) for `Array` properties
     + [Property bindings](#bindings)
     + [Superclass calls](#super)

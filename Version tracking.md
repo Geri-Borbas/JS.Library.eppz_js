@@ -1,12 +1,12 @@
 #### Doing
 
-+ Refactor className property
-    + Create class property for instances
-    + Create name property for classes
-    + Same for `super` proxy object
++ Mocha client side tests
 
-+ Tests
-    + Mocha / Karma, Travis CI
+
+#### 0.2.1
+
++ Class features now dependent on `Object.js` and `KeyPaths.js`
+
 
 #### 0.2.0
 

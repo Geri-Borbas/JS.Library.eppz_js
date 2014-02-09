@@ -11,8 +11,14 @@
 
 
 /**
- *
- * @constructor
+ * Object helpers.
+ */
+include('Object.js');
+include('KeyPaths.js');
+
+
+/**
+ * Class object.
  */
 function Class() {}
 Class.prototype.construct = function() {};
