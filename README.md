@@ -1,21 +1,17 @@
 eppz!js
 =======
 
-**Objective-JavaScript** for everyday use.
+**Objective-JavaScript** for everyday use. Minimalistic but readable API. Perfect base for a clean / extendable design. **A single file called [`eppz!js!class.min.js`](https://github.com/eppz/eppz-js/blob/master/build/eppz!js!class.min.js)** is what you're looking for.
 
-Easy inheritance, readable implementations, class methods (!), reliable `super` calls, minimalistic but readable API. Perfect base for a clean / extendable design.
-
-> ### [Superclass calls](#super)
-> #### [Enumerators](#enumerators)
-> #### [Property bindings](#bindings)
-> ##### [Inheritance](#inheritance)
-> ##### [Class methods](#class_methods)
-> ##### [KeyPaths](#keypaths)
-
-Like/use objective programming? You'll like this. **A single file called [`eppz!js!class.min.js`](https://github.com/eppz/eppz-js/blob/master/build/eppz!js!class.min.js)** is what you're looking for.
+> ### [Superclass calls](#_super)
+> #### [Enumerators](#_enumerators)
+> #### [Property bindings](#_bindings)
+> ##### [Inheritance](#_inheritance)
+> ##### [Class methods](#_class_methods)
+> ##### [KeyPaths](#_keypaths)
 
 
-<a name="inheritance"></a>
+<a name="_inheritance"></a>
 # Inheritance
 
 **Creating classes**, and instances are pretty straightforward.
@@ -74,7 +70,7 @@ var widget = new Widget(1);
 console.log(widget.id); // widget_1
 ```
 
-<a name="class_methods"></a>
+<a name="_class_methods"></a>
 Or using **class methods** for factories and more.
 ```JavaScript
 // Cool factory methods.
@@ -93,7 +89,7 @@ var widget = Widget.widgetWithNumber(1);
 console.log(widget.id); // widget_1
 ```
 
-<a name="super"></a>
+<a name="_super"></a>
 ## `super` calls
 
 Many JavaScript class implementation does not **take care of passing the correct `this` reference** (calling instance) for superclass method calls. With eppz!js Class your `super` calls works as you'd expect.
@@ -126,7 +122,7 @@ There are class implementations out there that would output `Default` as color h
 This method works over **any amount of cascading super calls**, as super references are bound right to the functions instead of the calling instance. Passing over the calling instance is done by a proxy object that wraps every superclass method into a function that does the job. See the [implementation](https://github.com/eppz/eppz-js/blob/master/Classes/eppz!kit/Class.js) for further details if interested at all.
 
 
-<a name="enumerators"></a>
+<a name="_enumerators"></a>
 ## Enumerators
 
 As soon as you define an `Array` property, enumerators will be synthesized for you upon instance construction.
@@ -149,7 +145,7 @@ manager.collection = [1,2,3,4,5,6,7,8,9];
 manager.logCollection();
 ```
 
-<a name="bindings"></a>
+<a name="_bindings"></a>
 ## Property bindings
 
 If a property map is present, accessors will be synthesized upon construction to keep properties synced. Great way to bind model changes to UI.
@@ -179,7 +175,7 @@ log(controller.div.style.width); // 40px
 ```
 
 
-<a name="keypaths"></a>
+<a name="_keypaths"></a>
 ## KeyPaths
 
 As a side effect, every object is equiped with keypath tools.
