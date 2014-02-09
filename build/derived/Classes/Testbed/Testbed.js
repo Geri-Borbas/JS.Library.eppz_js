@@ -389,6 +389,9 @@ log('_________________________________');
     third.stuff('it');
     fourth.stuff('it');
 
+    var check = first instanceof First;
+    log('Eko '+check);
+
     /*
 
         Outputs as:
@@ -525,7 +528,7 @@ log('__________________________________');
         className: 'Manager',
 
         collection: [],
-        enumerateCollection: function(callback){}, // This is optional. May define as placeholder to let IDE auto complete for you.
+        enumerateCollection: function(callback){}, // This is optional. May define as placeholder to let IDE autocomplete for you.
 
         logCollection: function()
         {
@@ -590,8 +593,7 @@ log('__________________________________');
 
 
     var controller = new Controller();
-    // controller.width = 40;
-    log(controller.div.style.width);
+    log('controller.div.style.width is `'+controller.div.style.width+'`.');
 
 })();
 

@@ -39,12 +39,17 @@ Object.prototype.addMethods
      */
     getValueForKeyPath: function(keyPath)
     {
-        if (keyPath == null) return;
+        // Checks.
+        if (keyPath == null) return null;
         if (keyPath.contains('.') == false) { return this.getValueForKey(keyPath); }
 
+        // Split.
         var chain = keyPath.split('.');
         var firstKey = chain.shift();
         var shiftedKeyPath = chain.join('.');
+
+        // Checks.
+        if (this[firstKey] == null) return null;
 
         return this[firstKey].getValueForKeyPath(shiftedKeyPath);
     },
@@ -57,12 +62,17 @@ Object.prototype.addMethods
      */
     setValueForKeyPath: function(value, keyPath)
     {
+        // Checks.
         if (keyPath == null) return;
         if (keyPath.contains('.') == false) { this.setValueForKey(value, keyPath); return; }
 
+        // Split.
         var chain = keyPath.split('.');
         var firstKey = chain.shift();
         var shiftedKeyPath = chain.join('.');
+
+        // Checks.
+        if (this[firstKey] == null) { return; }
 
         this[firstKey].setValueForKeyPath(value, shiftedKeyPath);
     },

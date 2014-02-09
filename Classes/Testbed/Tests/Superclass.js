@@ -67,6 +67,9 @@ log('_________________________________');
     third.stuff('it');
     fourth.stuff('it');
 
+    var check = first instanceof First;
+    log('Eko '+check);
+
     /*
 
         Outputs as:

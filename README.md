@@ -7,8 +7,16 @@ Easy inheritance, readable implementations, class methods (!), reliable `super` 
 
 Like/use objective programming? You'll like this. **A single file called [`eppz!js!class.min.js`](https://github.com/eppz/eppz-js/blob/master/build/eppz!js!class.min.js)** is what you're looking for.
 
+* Awesome feature pool
+    + [Automatic enumerators](#enumerators) for `Array` properties
+    + [Property bindings](#bindings)
+    + [Superclass calls](#super)
+    + [Inheritance](#inheritance)
+    + [Class methods](#class_methods)
 
-# Usage
+
+<a name="inheritance"></a>
+# Inheritance
 
 **Creating classes**, and instances are pretty straightforward.
 ```JavaScript
@@ -66,6 +74,7 @@ var widget = new Widget(1);
 console.log(widget.id); // widget_1
 ```
 
+<a name="class_methods"></a>
 Or using **class methods** for factories and more.
 ```JavaScript
 // Cool factory methods.
@@ -84,6 +93,7 @@ var widget = Widget.widgetWithNumber(1);
 console.log(widget.id); // widget_1
 ```
 
+<a name="super"></a>
 ## `super` calls
 
 Many JavaScript class implementation does not **take care of passing the correct `this` reference** (calling instance) for superclass method calls. With eppz!js Class your `super` calls works as you'd expect.
@@ -114,6 +124,56 @@ console.log(widget.getColorDescription()); // As you would expect. My color is B
 There are class implementations out there that would output `Default` as color here. Actually the main reason I made this `Class` implementation was to get over this issue.
 
 This method works over **any amount of cascading super calls**, as super references are bound right to the functions instead of the calling instance. Passing over the calling instance is done by a proxy object that wraps every superclass method into a function that does the job. See the [implementation](https://github.com/eppz/eppz-js/blob/master/Classes/eppz!kit/Class.js) for further details if interested at all.
+
+
+<a name="enumerators"></a>
+## Enumerators
+
+As soon as you define an `Array` property, enumerators will be synthesized for you upon instance construction.
+```JavaScript
+var Manager = Class.extend
+({
+    collection: [],
+    logCollection: function()
+    {
+        this.enumerateCollection(function(eachCollection, eachIndex) // Created automagically.
+        {
+            log(eachIndex+': '+eachCollection);
+        });
+
+    }
+});
+
+var manager = new Manager();
+manager.collection = [1,2,3,4,5,6,7,8,9];
+manager.logCollection();
+```
+
+<a name="bindings"></a>
+## Property bindings
+
+If a property map is present, accessors will be synthesized upon construction to keep properties synced. Great way to bind model changes to UI.
+```JavaScript
+var Controller = Class.extend
+(
+    {
+        width: 20,
+        div: null,
+
+        construct: function()
+        {
+            this.div = document.createElement('div');
+        }
+    },
+    {},
+    {
+        'width' : [ 'div.style.width', '%px' ]
+    }
+);
+
+var controller = new Controller();
+log(controller.div.style.width); // 20px
+```
 
 
 ## `eppz!js`

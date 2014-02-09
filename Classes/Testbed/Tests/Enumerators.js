@@ -22,7 +22,7 @@ log('__________________________________');
         className: 'Manager',
 
         collection: [],
-        enumerateCollection: function(callback){}, // This is optional. May define as placeholder to let IDE auto complete for you.
+        enumerateCollection: function(callback){}, // This is optional. May define as placeholder to let IDE autocomplete for you.
 
         logCollection: function()
         {

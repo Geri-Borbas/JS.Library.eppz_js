@@ -151,12 +151,17 @@ Object.prototype.addMethods
      */
     getValueForKeyPath: function(keyPath)
     {
-        if (keyPath == null) return;
+        // Checks.
+        if (keyPath == null) return null;
         if (keyPath.contains('.') == false) { return this.getValueForKey(keyPath); }
 
+        // Split.
         var chain = keyPath.split('.');
         var firstKey = chain.shift();
         var shiftedKeyPath = chain.join('.');
+
+        // Checks.
+        if (this[firstKey] == null) return null;
 
         return this[firstKey].getValueForKeyPath(shiftedKeyPath);
     },
@@ -169,12 +174,17 @@ Object.prototype.addMethods
      */
     setValueForKeyPath: function(value, keyPath)
     {
+        // Checks.
         if (keyPath == null) return;
         if (keyPath.contains('.') == false) { this.setValueForKey(value, keyPath); return; }
 
+        // Split.
         var chain = keyPath.split('.');
         var firstKey = chain.shift();
         var shiftedKeyPath = chain.join('.');
+
+        // Checks.
+        if (this[firstKey] == null) { return; }
 
         this[firstKey].setValueForKeyPath(value, shiftedKeyPath);
     },
@@ -637,12 +647,18 @@ Class.className = 'Class';
  *
  * Adds a class method called 'extend'.
  * Adds an instance property called 'super'.
+ * You can define class name by set the `className` property as an instance property.
+ *
+ * Constructing steps:
+ * 1. Look up defined properties, create array enumerators.
+ * 2. Look up defined properties, set default values.
+ * 3. Create property bindings (override accessors).
+ * 4. Calls `constructor` implementation.
+ * 5. Sync every binding after constructor has finished.
  *
  * @param instanceMethods An object with all the instance methods and properties.
  * @param classMethods An object with all the class methods and properties.
  * @param propertyBindings A property map that binds left properties to right properties with a given format.
- *
- * You can define class name by set the `className` property as an instance property.
  */
 Class.extend = function(instanceMethods, classMethods, propertyBindings)
 {
@@ -710,12 +726,12 @@ Class.extend = function(instanceMethods, classMethods, propertyBindings)
             // Sythesize enumerators.
             ClassTools.synthesizeEnumeratorsForObject(this);
 
+            // Equip constants.
+            ClassTools.copyPropertiesOfObjectTo(instanceMethods, this);
+
             // Synthesize property bindings.
             if (propertyBindings != null)
             { ClassTools.synthesizeAccessorsWithPropertyBindingsMapForObject(this, instanceMethods, propertyBindings); }
-
-            // Equip constants.
-            // ClassTools.copyPropertiesOfObjectTo(instanceMethods, this);
 
             // Add getter for 'super'.
             Object.defineProperty(this, 'super', { get : function()
@@ -727,6 +743,10 @@ Class.extend = function(instanceMethods, classMethods, propertyBindings)
 
             // Call user-defined constructor.
             this.construct.apply(this, arguments);
+
+            // Invoke setters for bindings after `construct`.
+            for (var eachBoundPropertyName in propertyBindings)
+            { this[eachBoundPropertyName] = this[eachBoundPropertyName]; }
         };
 
         // Determine class name.
@@ -791,8 +811,6 @@ Class.extend = function(instanceMethods, classMethods, propertyBindings)
                 super_.callingInstance = this; // Bind current instance as caller.
                 return super_;
             }});
-
-        log(Class);
 
 
     return Class;
@@ -928,8 +946,6 @@ var ClassTools =
             var eachBoundPropertyName = propertyMap[eachPropertyName][0];
             var eachBoundPropertyFormat = propertyMap[eachPropertyName][1];
 
-            log('Map '+eachPropertyName);
-
             // Getter.
             var getter = function()
             {
@@ -937,7 +953,6 @@ var ClassTools =
                 return this[instanceVariableName];
             };
             getter._instanceVariableName = eachInstanceVariableName;
-            Object.defineProperty(object, eachPropertyName, { get : getter });
 
             // Setter.
             var setter = function(value)
@@ -956,7 +971,12 @@ var ClassTools =
             setter._instanceVariableName = eachInstanceVariableName;
             setter._boundPropertyName = eachBoundPropertyName;
             setter._boundPropertyFormat = eachBoundPropertyFormat;
-            Object.defineProperty(object, eachPropertyName, { set : setter });
+
+            // Set current value gently.
+            object[eachInstanceVariableName] = object[eachPropertyName];
+
+            // Compose.
+            Object.defineProperty(object, eachPropertyName, { get : getter, set : setter });
         }
     },
 

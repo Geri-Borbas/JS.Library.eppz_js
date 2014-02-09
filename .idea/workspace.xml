@@ -2,47 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="634ad747-0992-43fe-a8a9-befdcf12abff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/Testbed/Tests/Bindings.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/Testbed/Tests/Enumerators.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/Testbed/Tests/KeyPaths.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/eppz!js/KeyPaths.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/eppz!js/Object.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tests/Object.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/Testbed/Tests/String.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Classes/eppz!js/String.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/derived/Classes/Testbed/Testbed.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/eppz!js.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/temp/Classes/Testbed/Testbed.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/temp/Classes/Testbed/Tests/ClassMethods.js" afterPath="$PROJECT_DIR$/build/derived/Classes/Testbed/Tests/ClassMethods.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/temp/Classes/Testbed/Tests/Element.js" afterPath="$PROJECT_DIR$/build/derived/Classes/Testbed/Tests/Element.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/temp/Classes/Testbed/Tests/Inheritance.js" afterPath="$PROJECT_DIR$/build/derived/Classes/Testbed/Tests/Inheritance.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/temp/Classes/Testbed/Tests/Superclass.js" afterPath="$PROJECT_DIR$/build/derived/Classes/Testbed/Tests/Superclass.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/temp/Classes/Testbed/Tests/SuperclassValues.js" afterPath="$PROJECT_DIR$/build/derived/Classes/Testbed/Tests/SuperclassValues.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/temp/Classes/eppz!js.js" afterPath="$PROJECT_DIR$/build/derived/Classes/eppz!js.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/temp/Classes/eppz!js/Array.js" afterPath="$PROJECT_DIR$/build/derived/Classes/eppz!js/Array.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/temp/Classes/eppz!js/Class.js" afterPath="$PROJECT_DIR$/build/derived/Classes/eppz!js/Class.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/temp/Classes/eppz!js/Element.js" afterPath="$PROJECT_DIR$/build/derived/Classes/eppz!js/Element.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/temp/Classes/eppz!js/Helpers.js" afterPath="$PROJECT_DIR$/build/derived/Classes/eppz!js/Helpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/eppz!js/Array.js" afterPath="$PROJECT_DIR$/Classes/eppz!js/Array.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Testbed/Tests/Bindings.js" afterPath="$PROJECT_DIR$/Classes/Testbed/Tests/Bindings.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/derived/Classes/Testbed/Tests/Bindings.js" afterPath="$PROJECT_DIR$/build/derived/Classes/Testbed/Tests/Bindings.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/eppz!js/Class.js" afterPath="$PROJECT_DIR$/Classes/eppz!js/Class.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/eppz!js/Element.js" afterPath="$PROJECT_DIR$/Classes/eppz!js/Element.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Testbed/Testbed.js" afterPath="$PROJECT_DIR$/Classes/Testbed/Testbed.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/derived/Classes/eppz!js/Class.js" afterPath="$PROJECT_DIR$/build/derived/Classes/eppz!js/Class.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Testbed/Tests/Enumerators.js" afterPath="$PROJECT_DIR$/Classes/Testbed/Tests/Enumerators.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/derived/Classes/Testbed/Tests/Enumerators.js" afterPath="$PROJECT_DIR$/build/derived/Classes/Testbed/Tests/Enumerators.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/eppz!js/KeyPaths.js" afterPath="$PROJECT_DIR$/Classes/eppz!js/KeyPaths.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/derived/Classes/eppz!js/KeyPaths.js" afterPath="$PROJECT_DIR$/build/derived/Classes/eppz!js/KeyPaths.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Testbed/Tests/Superclass.js" afterPath="$PROJECT_DIR$/Classes/Testbed/Tests/Superclass.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/derived/Classes/Testbed/Tests/Superclass.js" afterPath="$PROJECT_DIR$/build/derived/Classes/Testbed/Tests/Superclass.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/derived/Classes/Testbed/Testbed.js" afterPath="$PROJECT_DIR$/build/derived/Classes/Testbed/Testbed.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Version tracking.md" afterPath="$PROJECT_DIR$/Version tracking.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/eppz!js!class.min.js" afterPath="$PROJECT_DIR$/build/eppz!js!class.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/eppz!js.js" afterPath="$PROJECT_DIR$/Classes/eppz!js.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/derived/Classes/eppz!js.js" afterPath="$PROJECT_DIR$/build/derived/Classes/eppz!js.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/eppz!js.min.js" afterPath="$PROJECT_DIR$/build/eppz!js.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/0.1.6/eppz!js_0.1.6.min.js" afterPath="$PROJECT_DIR$/build/0.1.6/eppz!js_0.1.6.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="eppz!kit.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Class.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391948430860" ignored="false" />
-    <file path="/README.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389739184765" ignored="false" />
+    <file path="/Class.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391973008429" ignored="false" />
+    <file path="/README.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391974207066" ignored="false" />
     <file path="/Inheritance.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389491542629" ignored="false" />
     <file path="/index.html" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391910406069" ignored="false" />
     <file path="/Super.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389232132897" ignored="false" />
     <file path="/Dummy.txt" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391908163336" ignored="false" />
-    <file path="/Superclass.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389491689960" ignored="false" />
+    <file path="/Superclass.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391973332634" ignored="false" />
     <file path="/ClassMethods.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389564256274" ignored="false" />
     <file path="/Alamo.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389494834728" ignored="false" />
     <file path="/helpers.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389565529182" ignored="false" />
@@ -59,7 +46,7 @@
     <file path="$PROJECT_DIR$/../_prototypes/grunting/build/grunting.min.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389656322983" ignored="false" />
     <file path="/VERSIONS.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389659511272" ignored="false" />
     <file path="/Testbed.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391945388876" ignored="false" />
-    <file path="/Version tracking.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391912193532" ignored="false" />
+    <file path="/Version tracking.md" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391973210427" ignored="false" />
     <file path="$PROJECT_DIR$/build/temp/Classes/eppz!kit/Class.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1389662717980" ignored="false" />
     <file path="/Array.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391915097478" ignored="false" />
     <file path="/Element.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391915020521" ignored="false" />
@@ -83,14 +70,12 @@
     <file path="$PROJECT_DIR$/../labs!/labs!transform/build/derived/Classes/eppz!js/Accessors.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391908791447" ignored="false" />
     <file path="/String.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391910343988" ignored="false" />
     <file path="/Object.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391912477953" ignored="false" />
-    <file path="/KeyPaths.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391913600279" ignored="false" />
+    <file path="/KeyPaths.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391972680216" ignored="false" />
     <file path="$PROJECT_DIR$/../labs!/labs!transform/Classes/app/helpers.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391915242472" ignored="false" />
-    <file path="$PROJECT_DIR$/build/derived/Classes/eppz!js/KeyPaths.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391913608177" ignored="false" />
     <file path="$PROJECT_DIR$/build/derived/Tests/Object.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391913734983" ignored="false" />
     <file path="/Enumerators.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391947047675" ignored="false" />
-    <file path="/Bindings.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391947412720" ignored="false" />
-    <file path="$PROJECT_DIR$/build/0.1.6/eppz!js_0.1.6.min.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391948510003" ignored="false" />
-    <file path="$PROJECT_DIR$/build/eppz!js.min.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391948510003" ignored="false" />
+    <file path="/Bindings.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391972904405" ignored="false" />
+    <file path="$PROJECT_DIR$/build/derived/Classes/Testbed/Tests/KeyPaths.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1391973339811" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,10 +95,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Class.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Class.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classes/eppz!js/Class.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="60" selection-start="4427" selection-end="4427" vertical-scroll-proportion="0.015353122">
+            <state line="222" column="0" selection-start="8736" selection-end="8736" vertical-scroll-proportion="-133.2">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -121,11 +106,52 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="702" selection-end="702" vertical-scroll-proportion="0.2923077">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Enumerators.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/Testbed/Tests/Enumerators.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="9" selection-start="1544" selection-end="1544" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Superclass.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/Testbed/Tests/Superclass.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="68" column="0" selection-start="2400" selection-end="2400" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Bindings.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classes/Testbed/Tests/Bindings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="10" selection-start="1569" selection-end="1569" vertical-scroll-proportion="0.0">
+            <state line="19" column="0" selection-start="1276" selection-end="1824" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeyPaths.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/eppz!js/KeyPaths.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="37" selection-start="2798" selection-end="2798" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#1128#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -148,22 +174,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/tests/tests.html" />
-        <option value="$PROJECT_DIR$/tests/Object.js" />
         <option value="$PROJECT_DIR$/Tests/Object.js" />
         <option value="$PROJECT_DIR$/Classes/eppz!js/String.js" />
-        <option value="$PROJECT_DIR$/Version tracking.md" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/Classes/Testbed/Tests/KeyPaths.js" />
-        <option value="$PROJECT_DIR$/Classes/eppz!js/KeyPaths.js" />
         <option value="$PROJECT_DIR$/Classes/eppz!js.js" />
         <option value="$PROJECT_DIR$/Classes/eppz!js/Element.js" />
         <option value="$PROJECT_DIR$/Classes/eppz!js/Array.js" />
-        <option value="$PROJECT_DIR$/Classes/Testbed/Tests/Enumerators.js" />
         <option value="$PROJECT_DIR$/Classes/Testbed/Testbed.js" />
         <option value="$PROJECT_DIR$/Classes/Testbed/Tests/Bindings.js" />
+        <option value="$PROJECT_DIR$/Classes/eppz!js/KeyPaths.js" />
+        <option value="$PROJECT_DIR$/Version tracking.md" />
+        <option value="$PROJECT_DIR$/Classes/Testbed/Tests/Superclass.js" />
+        <option value="$PROJECT_DIR$/Classes/Testbed/Tests/Enumerators.js" />
         <option value="$PROJECT_DIR$/Classes/eppz!js/Class.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -498,47 +524,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="56" selection-start="893" selection-end="893" vertical-scroll-proportion="0.30541873">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Testbed/Tests/KeyPaths.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="44" selection-start="1749" selection-end="1749" vertical-scroll-proportion="0.65868264">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/eppz!js/KeyPaths.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="36" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.4729064">
-          <folding>
-            <element signature="e#0#1128#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/eppz!js/Element.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="9" selection-start="6125" selection-end="6125" vertical-scroll-proportion="0.40918162">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/eppz!js/Object.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="35" selection-start="1886" selection-end="1886" vertical-scroll-proportion="0.46407187">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Testbed/Tests/SuperclassValues.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="2852" vertical-scroll-proportion="0.0">
@@ -590,13 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Testbed/Tests/Enumerators.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="9" selection-start="0" selection-end="1910" vertical-scroll-proportion="0.4041916">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Testbed/Testbed.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="23" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.31437126">
@@ -604,20 +582,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Testbed/Tests/KeyPaths.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="9" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.35928145">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Testbed/Tests/Superclass.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="0" selection-start="2400" selection-end="2400" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/eppz!js/KeyPaths.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="37" selection-start="2798" selection-end="2798" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#1128#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Testbed/Tests/Enumerators.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="9" selection-start="1544" selection-end="1544" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Testbed/Tests/Bindings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="10" selection-start="1569" selection-end="1569" vertical-scroll-proportion="0.0">
+        <state line="19" column="0" selection-start="1276" selection-end="1824" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Version tracking.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="413" selection-end="413" vertical-scroll-proportion="0.27579162">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/eppz!js/Class.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="60" selection-start="4427" selection-end="4427" vertical-scroll-proportion="0.015353122">
+        <state line="222" column="0" selection-start="8736" selection-end="8736" vertical-scroll-proportion="-133.2">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="702" selection-end="702" vertical-scroll-proportion="0.2923077">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
   </component>

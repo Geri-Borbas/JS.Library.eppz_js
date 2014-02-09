@@ -5,13 +5,15 @@
     + Create name property for classes
     + Same for `super` proxy object
 
-+ Class goodies
-    + Automatic getter setter generation
-    + Automatic enumerators for collections (!)
-
 + Tests
     + Mocha / Karma, Travis CI
 
+#### 0.2.0
+
++ Awesome `Class` tools
+    + Automatic enumerators for colelctions (see `Testbed/Tests/Enumerators.js` for usage)
+    + Property bindings (see `Testbed/Tests/Bindings.js` for usage)
+    +
 
 #### 0.1.7
 
