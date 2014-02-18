@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="634ad747-0992-43fe-a8a9-befdcf12abff" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Testbed/Testbed.js" afterPath="$PROJECT_DIR$/Classes/Testbed/Testbed.js" />
     </list>
     <ignored path="eppz!kit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,10 +97,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".travis.yml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".travis.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="6" column="8" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Testbed.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Classes/Testbed/Testbed.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="1131" selection-end="1131" vertical-scroll-proportion="0.1875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="0" selection-start="96" selection-end="96" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
@@ -142,7 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Classes/eppz!js.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Tests/index.js" />
         <option value="$PROJECT_DIR$/Tests/js/mocha.js" />
@@ -158,6 +175,7 @@
         <option value="$PROJECT_DIR$/Tests/suite/Object.js" />
         <option value="$PROJECT_DIR$/Version tracking.md" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/Classes/Testbed/Testbed.js" />
       </list>
     </option>
   </component>
@@ -566,11 +584,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/grunt-mocha/node_modules/grunt-lib-phantomjs/lib/phantomjs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.7492447" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/js/mocha.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5566" column="18" selection-start="116506" selection-end="116506" vertical-scroll-proportion="0.4882353">
@@ -653,13 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0863061">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="31" selection-start="197" selection-end="197" vertical-scroll-proportion="-4.375">
@@ -676,7 +682,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="6" column="8" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="96" selection-end="96" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Testbed/Testbed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="1131" selection-end="1131" vertical-scroll-proportion="0.1875">
           <folding />
         </state>
       </provider>

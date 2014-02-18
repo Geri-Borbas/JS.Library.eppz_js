@@ -10,7 +10,6 @@
  */
 
 
-include('Tests/String.js');
 include('Tests/KeyPaths.js');
 include('Tests/Element.js');
 
