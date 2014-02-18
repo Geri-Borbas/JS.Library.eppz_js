@@ -77,7 +77,7 @@
     <file path="/indexOf.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1392688187764" ignored="false" />
     <file path="/suite.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1392688683344" ignored="false" />
     <file path="$PROJECT_DIR$/build/derived/Tests/suite/Object.js" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1392688546849" ignored="false" />
-    <file path="/.travis.yml" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1392691040186" ignored="false" />
+    <file path="/.travis.yml" changelist="634ad747-0992-43fe-a8a9-befdcf12abff" time="1392691414532" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,10 +97,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Gruntfile.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="0" selection-start="1200" selection-end="1200" vertical-scroll-proportion="0.09294513">
+            <state line="52" column="17" selection-start="1496" selection-end="1496" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".travis.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="18" selection-start="123" selection-end="123" vertical-scroll-proportion="0.083986565">
               <folding />
             </state>
           </provider>
@@ -651,16 +660,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="16" selection-start="53" selection-end="53" vertical-scroll-proportion="0.05039194">
+        <state line="52" column="17" selection-start="1496" selection-end="1496" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1200" selection-end="1200" vertical-scroll-proportion="0.09294513">
+        <state line="5" column="18" selection-start="123" selection-end="123" vertical-scroll-proportion="0.083986565">
           <folding />
         </state>
       </provider>
