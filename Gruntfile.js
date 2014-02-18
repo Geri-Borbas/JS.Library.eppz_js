@@ -67,7 +67,7 @@ module.exports = function(grunt)
             },
 
             test:
-            { src: [ 'Tests/**/*.html'] }
+            { src: [ 'Tests/index.html'] }
         },
 
         // Watch.
