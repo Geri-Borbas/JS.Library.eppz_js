@@ -14,7 +14,7 @@ module.exports = function(grunt)
 
             files:
             {
-                src: ['Classes/**/*.js', 'Tests/suite/**/*.js'],
+                src: ['Classes/**/*.js', 'Test/suite/**/*.js'],
                 dest: 'build/derived',
             }
         },
@@ -57,7 +57,7 @@ module.exports = function(grunt)
 
         },
 
-        // Tests.
+        // Test.
         mocha:
         {
             test:
@@ -68,14 +68,14 @@ module.exports = function(grunt)
                     reporter: 'Spec',
                 },
 
-                src: [ 'Tests/index.html']
+                src: [ 'Test/index.html']
             }
         },
 
         // Watch.
         watch:
         {
-            files: ['Classes/**', 'Tests/**'],
+            files: ['Classes/**', 'Test/**'],
             tasks: ['includes', 'uglify', 'mocha'],
         }
 
