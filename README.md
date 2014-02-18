@@ -1,5 +1,6 @@
 eppz!js
 =======
+[![Build Status](https://travis-ci.org/eppz/eppz-js.png?branch=master)](https://travis-ci.org/eppz/eppz-js) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/eppz/eppz-js/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 **Objective-JavaScript** for everyday use. Minimalistic but readable API. Perfect base for a clean / extendable design. **A single file called [`eppz!js!class.min.js`](https://github.com/eppz/eppz-js/blob/master/build/eppz!js!class.min.js)** is what you're looking for.
 
@@ -212,5 +213,4 @@ Beside this `Class` implementation this repository collects some tools for every
 > Licensed under the [Open Source MIT license](http://en.wikipedia.org/wiki/MIT_License).
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/02949f8d26ad5362c8cbed6962cef669 "githalytics.com")](http://githalytics.com/eppz/eppz-js)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/eppz/eppz-js/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
