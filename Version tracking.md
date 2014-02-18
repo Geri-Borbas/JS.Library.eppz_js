@@ -1,3 +1,9 @@
+#### 0.2.55
+
+    + Test suites for Class features
+        + `Class.classMethods.js` don't pass (yet commented out)
+
+
 #### 0.2.5
 
     + Added mocha client side tests

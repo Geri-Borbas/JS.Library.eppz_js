@@ -65,18 +65,30 @@ module.exports = function(grunt)
                 options:
                 {
                     run: true,
+                    debug: true,
                     reporter: 'Spec',
                 },
 
-                src: [ 'Test/index.html']
+                src: [ 'Test/index.html' ]
             }
         },
 
         // Watch.
         watch:
         {
-            files: ['Classes/**', 'Test/**'],
-            tasks: ['includes', 'uglify', 'mocha'],
+            // Build product.
+            default:
+            {
+                files: ['Classes/**', 'Test/**'],
+                tasks: ['includes', 'uglify', 'mocha'],
+            },
+
+            // Run tests only.
+            test:
+            {
+                files: ['Test/**'],
+                tasks: ['mocha'],
+            }
         }
 
     });
@@ -88,7 +100,10 @@ module.exports = function(grunt)
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // `default` task for the everyday.
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['watch:default']);
+
+    // `watch_test` task for watch tests only.
+    grunt.registerTask('watch_test', ['watch:test']);
 
     // `build`, `test` task for Travis CI.
     grunt.registerTask('build', ['includes', 'uglify']);

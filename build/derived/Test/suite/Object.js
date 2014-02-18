@@ -1,7 +1,7 @@
 /**
  *
- * Created by Borbás Geri on 1/8/14
- * Copyright (c) 2013 eppz! development, LLC.
+ * Created by Borbás Geri on 2/18/14
+ * Copyright (c) 2014 eppz! development, LLC.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
@@ -10,46 +10,33 @@
  */
 
 
-log('____________________________');
-log('eppz!js Class // inheritance');
-log('____________________________');
+var someObject = {};
+    someObject.addMethods(
+    {
+        gimmeFive: function()
+        {
+            return 5;
+        }
+    });
+    someObject.addProperties(
+    {
+        id: 1
+    });
 
-
-(function()
+describe('Object.addMethods', function()
 {
-    var A = Class.extend
-    ({
-        className: 'A',
-        aCanDo: function()
-        { log(this.className+' can do here.'); },
+    it('should add `gimmeFive` method to the target.', function()
+    {
+        someObject.should.respondTo('gimmeFive');
+        someObject.gimmeFive().should.equal(5);
     });
+});
 
-    var B = A.extend
-    ({
-        className: 'B',
-        bCanDo: function()
-        { log(this.className+' can do there.'); },
+describe('Object.addProperties', function()
+{
+    it('should add `id` property to the target.', function()
+    {
+        someObject.id.should.equal(1);
     });
-
-    var C = B.extend
-    ({
-        className: 'C',
-        cCanDo: function()
-        { log(this.className+' can do anywhere.'); },
-
-    });
-
-
-    var a = new A();
-        a.aCanDo();
-
-    var b = new B();
-        b.aCanDo();
-        b.bCanDo();
-
-    var c = new C();
-        c.aCanDo();
-        c.bCanDo();
-        c.cCanDo();
-})();
+});
 

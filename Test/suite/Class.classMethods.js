@@ -1,0 +1,127 @@
+/**
+ *
+ * Created by Borbás Geri on 2/18/14
+ * Copyright (c) 2014 eppz! development, LLC.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ *
+ */
+
+
+describe('Function arguments.callee', function()
+{
+    var gimmeFive = function()
+    { return arguments.callee.value; };
+    gimmeFive.value = 5;
+
+    it('should work.', function()
+    {
+        gimmeFive().should.equal(5);
+    });
+});
+
+describe('Function arguments.callee.caller', function()
+{
+    var callerValue = function()
+    { return arguments.callee.caller.value; };
+
+    var gimmeFive = function()
+    { return callerValue(); };
+    gimmeFive.value = 5;
+
+    it('should work.', function()
+    { gimmeFive().should.equal(5); });
+});
+
+describe('Object.defineProperty', function()
+{
+    var gimmeFive = { value: 0 };
+    Object.defineProperty(gimmeFive, 'value', { get : function(){ return 5; } });
+
+    it('should work.', function()
+    { gimmeFive.value.should.equal(5); });
+});
+
+/*
+describe('Class `super` class methods', function()
+{
+
+
+    var Centimeters = Class.extend
+    (
+        // Instance methods (`this` refers to an instance)
+        {
+            // Properties can be declared this way as well.
+            className: 'Centimeters',
+            value: 0,
+
+            getValue: function()
+            { return this.value; },
+        },
+
+        // Class methods (`this` refers to the class)
+        {
+            instanceWithMillimeters: function(value)
+            {
+                var instance = new this();
+                instance.value = value;
+                instance.value /= 10;
+                return instance;
+            },
+        }
+    );
+
+    var Decimeters = Centimeters.extend
+    (
+        // Instance methods
+        {
+            className: 'Decimeters',
+            value: 0,
+        },
+
+        // Class methods
+        {
+            instanceWithMillimeters: function(value)
+            {
+                var instance = this.super.instanceWithMillimeters(value);
+                instance.value /= 10;
+                return instance;
+            }
+        }
+    );
+
+    var Meters = Decimeters.extend
+    (
+        // Instance methods
+        {
+            className: 'Meters',
+            value: 0,
+        },
+
+        // Class methods
+        {
+            instanceWithMillimeters: function(value)
+            {
+                var instance = this.super.instanceWithMillimeters(value);
+                instance.value /= 10;
+                return instance;
+            }
+        }
+    );
+
+    it('should call superclass method implementation with caller as `this` reference.', function()
+    {
+        var millimeters = 1000;
+        var centimeters = Centimeters.instanceWithMillimeters(millimeters);
+        var decimeters = Decimeters.instanceWithMillimeters(millimeters);
+        var meters = Meters.instanceWithMillimeters(millimeters);
+
+        // centimeters.value.should.equal(100);
+        // decimeters.value.should.equal(10);
+        // meters.value.should.equal(1);
+    });
+
+});
+*/
