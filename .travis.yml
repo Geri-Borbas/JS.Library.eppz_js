@@ -1,2 +1,7 @@
 language: node_js
-script: 'grunt includes uglify mocha'
+node_js:
+  - "0.8"
+before_install: npm install -g grunt-cli
+install: npm install
+before_script: grunt includes uglify
+script: 'grunt mocha'
