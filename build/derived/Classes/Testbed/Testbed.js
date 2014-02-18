@@ -10,7 +10,6 @@
  */
 
 
-Error including "Classes/Testbed/Tests/String.js".
 /**
  *
  * Created by Borbás Geri on 2/9/14

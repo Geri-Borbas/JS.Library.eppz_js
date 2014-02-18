@@ -60,14 +60,16 @@ module.exports = function(grunt)
         // Tests.
         mocha:
         {
-            options:
-            {
-                run: true,
-                reporter: 'Spec',
-            },
-
             test:
-            { src: [ 'Tests/index.html'] }
+            {
+                options:
+                {
+                    run: true,
+                    reporter: 'Spec',
+                },
+
+                src: [ 'Tests/index.html']
+            }
         },
 
         // Watch.
@@ -85,7 +87,11 @@ module.exports = function(grunt)
     grunt.loadNpmTasks('grunt-mocha');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    // Default task.
+    // `default` task for the everyday.
     grunt.registerTask('default', ['watch']);
+
+    // `build`, `test` task for Travis CI.
+    grunt.registerTask('build', ['includes', 'uglify']);
+    grunt.registerTask('test', ['mocha']);
 
 };
