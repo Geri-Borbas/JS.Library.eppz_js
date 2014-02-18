@@ -14,7 +14,7 @@ module.exports = function(grunt)
 
             files:
             {
-                src: ['Classes/**', 'Tests/**'],
+                src: ['Classes/**/*.js', 'Tests/suite/**/*.js'],
                 dest: 'build/derived',
             }
         },
@@ -57,11 +57,24 @@ module.exports = function(grunt)
 
         },
 
+        // Tests.
+        mocha:
+        {
+            options:
+            {
+                run: true,
+                reporter: 'Spec',
+            },
+
+            test:
+            { src: [ 'Tests/**/*.html'] }
+        },
+
         // Watch.
         watch:
         {
             files: ['Classes/**', 'Tests/**'],
-            tasks: ['includes', 'uglify'],
+            tasks: ['includes', 'uglify', 'mocha'],
         }
 
     });
@@ -69,6 +82,7 @@ module.exports = function(grunt)
     // Load plugins.
     grunt.loadNpmTasks('grunt-includes');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-mocha');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task.

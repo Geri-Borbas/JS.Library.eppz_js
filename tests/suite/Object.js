@@ -1,6 +1,6 @@
 /**
  *
- * Created by Borbás Geri on 2/9/14
+ * Created by Borbás Geri on 2/18/14
  * Copyright (c) 2014 eppz! development, LLC.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -10,18 +10,33 @@
  */
 
 
-log('_______________');
-log('eppz!js Strings');
-log('_______________');
+var someObject = {};
+    someObject.addMethods(
+    {
+        gimmeFive: function()
+        {
+            return 5;
+        }
+    });
+    someObject.addProperties(
+    {
+        id: 1
+    });
 
-
-(function()
+describe('Object.addMethods', function()
 {
+    it('should add `gimmeFive` method to the target.', function()
+    {
+        someObject.should.respondTo('gimmeFive');
+        someObject.gimmeFive().should.equal(5);
+    });
+});
 
-    var batman = 'Batman';
-    log(batman+' contains `man` is '+batman.contains('man'));
+describe('Object.addProperties', function()
+{
+    it('should add `id` property to the target.', function()
+    {
+        someObject.id.should.equal(1);
+    });
+});
 
-    var superman = 'superman';
-    log(superman.capitalize());
-
-})();

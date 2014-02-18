@@ -1,6 +1,9 @@
-#### Doing
+#### 0.2.5
 
-+ Mocha client side tests
+    + Added mocha client side tests
+        + Test suites for some basic feature
+            + String.js
+            + Object.js
 
 
 #### 0.2.2

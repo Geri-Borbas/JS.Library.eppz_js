@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>eppz!js test suite</title>
+    <link rel="stylesheet" href="css/mocha.css" type="text/css" charset="utf-8" />
+</head>
+<body>
+
+    <!-- Required for browser reporter -->
+    <div id="mocha"></div>
+
+    <!-- mocha -->
+    <script src="js/mocha.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        mocha.setup('bdd');
+    </script>
+
+    <!-- Chai assertation library -->
+    <script src="js/chai.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        var expect = chai.expect;
+        var assert = chai.assert;
+        chai.should();
+    </script>
+
+    <!-- eppz!js -->
+    <script src="../build/eppz!js.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Test suite -->
+    <script src="suite/String.js"></script>
+    <script src="suite/Object.js"></script>
+
+</body>
+</html>
